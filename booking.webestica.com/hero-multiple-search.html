@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Booking - Multipurpose Online Booking Theme</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Booking - Multipurpose Online Booking Theme">
+
+	<!-- Dark mode -->
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+ 
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+		}
+
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+
+		setTheme(getPreferredTheme())
+
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+
+			showActiveTheme(getPreferredTheme())
+
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+
+			}
+		})
+		
+	</script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/css/flatpickr.min.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- Header START -->
+<header class="navbar-light header-sticky">
+	<!-- Logo Nav START -->
+	<nav class="navbar navbar-expand-xl">
+		<div class="container">
+			<!-- Logo START -->
+			<a class="navbar-brand" href="index.html">
+				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+			</a>
+			<!-- Logo END -->
+
+			<!-- Buttons START -->
+			<ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
+
+				<!-- Download app -->
+				<li class="nav-item align-items-center d-none d-sm-flex position-relative me-sm-3">
+					<!-- Icon -->
+					<a href="#" class="icon-md btn btn-light mb-0 p-0 flex-shrink-0"><i class="bi bi-cloud-download-fill"></i></a>
+					<div class="ms-2 d-none d-md-block">
+						<h6 class="mb-0"><a href="#" class="stretched-link">Download the app</a></h6>
+						<p class="small mb-0 text-body">Get exciting welcome offers</p>
+					</div>
+				</li>
+
+        <!-- Language dropdown START -->
+				<li class="nav-item dropdown">
+					<a class="icon-md btn btn-light mb-0 p-0" href="#" id="languageDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="bi bi-globe"> </i>
+					</a>
+          <ul class="dropdown-menu dropdown-animation dropdown-menu-end min-w-auto mt-2" aria-labelledby="languageDropdown">
+            <li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/uk.svg" alt="">English</a> </li>
+            <li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/sp.svg" alt="">Español</a> </li>
+            <li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/fr.svg" alt="">Français</a> </li>
+            <li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/gr.svg" alt="">Deutsch</a> </li>
+          </ul>
+				</li>
+				<!-- Language dropdown END -->
+
+				<!-- Login button START -->
+				<li class="nav-item ms-3">
+					<a href="sign-up.html" class="btn btn-sm btn-primary mb-0"><i class="fa-solid fa-right-to-bracket me-2"></i>Sign up</a>
+				</li>
+				<!-- Login button END -->
+			</ul>
+			<!-- Buttons START -->
+
+		</div>
+	</nav>
+	<!-- Logo Nav END -->
+</header>
+<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Main banner START -->
+<section class="pt-0">
+	<!-- Background and title -->
+	<div class="container-fluid" style="background-image:url(assets/images/bg/08.jpg); background-position: center left; background-size: cover;">
+		<div class="row">
+			<!-- Title -->
+			<div class="col-md-6 mx-auto text-center pt-7 pb-9">
+				<h1 class="text-white">Hotel, cab, flight & tour experience</h1>
+				<p class="lead text-white mb-0">Get the best prices on 2,000,000+ properties, worldwide</p>
+			</div>
+		</div> <!-- Row END -->
+	</div>
+
+	<!-- Search START -->
+	<div class="container mt-n8">
+		<div class="row">
+			<!-- Tabs START -->
+			<div class="col-11 col-lg-8 col-xl-6 mx-auto">
+				<ul class="nav nav-tabs nav-bottom-line nav-justified nav-responsive bg-mode rounded-top z-index-9 position-relative pt-2 pb-0 px-4">
+					<li class="nav-item"> 
+						<a class="nav-link mb-0 active" data-bs-toggle="tab" href="#tab-1-1"><i class="fa-solid fa-hotel fa-fw me-2"></i>Hotel</a> 
+					</li>
+					<li class="nav-item">
+						<a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-1-2"><i class="fa-solid fa-plane fa-fw me-2"></i>Flight</a> 
+						</li>
+					<li class="nav-item"> 
+						<a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-1-3"><i class="fa-solid fa-globe-americas fa-fw me-2"></i>Tour</a> 
+					</li>
+					<li class="nav-item"> 
+						<a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-1-4"><i class="fa-solid fa-car fa-fw me-2"></i>Cabs</a> 
+					</li>
+				</ul>
+			</div>
+			<!-- Tabs END -->
+
+			<!-- Tab content START -->
+			<div class="col-12">
+				<div class="tab-content" id="nav-tabContent">
+					
+					<!-- Tab content item START -->
+					<div class="tab-pane fade show active" id="tab-1-1">
+						<form class="card shadow p-0">
+							<!-- Card header -->
+							<div class="card-header p-4">
+								<h5 class="mb-0"><i class="fa-solid fa-hotel fa-fw me-2"></i>Hotel Booking</h5>
+							</div>
+
+							<!-- Card body -->
+							<div class="card-body p-4 pt-0">
+								<div class="row g-4">
+									<!-- Location -->
+									<div class="col-12">
+										<div class="form-icon-input form-size-lg form-fs-lg">
+											<select class="form-select js-choice" data-search-enabled="true">
+												<option value="">Search hotel</option>
+												<option>San Jacinto, USA</option>
+												<option>North Dakota, Canada</option>
+												<option>West Virginia, Paris</option>
+											</select>
+											<span class="form-icon"><i class="bi bi-search fs-5"></i></span>
+										</div>
+									</div>
+									
+									<!-- Guest -->
+									<div class="col-lg-4">
+										<div class="form-icon-input form-fs-lg">
+											<div class="dropdown guest-selector me-2">
+												<input type="text" class="form-guest-selector form-control form-control-lg selection-result" placeholder="Select occupant" data-bs-auto-close="outside" data-bs-toggle="dropdown">
+											
+												<!-- dropdown items -->
+												<ul class="dropdown-menu guest-selector-dropdown">
+													<!-- Adult -->
+													<li class="d-flex justify-content-between">
+														<div>
+															<h6 class="mb-0">Adults</h6>
+															<small>Ages 13 or above</small>
+														</div>
+		
+														<div class="hstack gap-1 align-items-center">
+															<button type="button" class="btn btn-link adult-remove p-0 mb-0"><i class="bi bi-dash-circle fs-5 fa-fw"></i></button>
+															<h6 class="guest-selector-count mb-0 adults">2</h6>
+															<button type="button" class="btn btn-link adult-add p-0 mb-0"><i class="bi bi-plus-circle fs-5 fa-fw"></i></button>
+														</div>
+													</li>
+		
+													<!-- Divider -->
+													<li class="dropdown-divider"></li>
+		
+													<!-- Child -->
+													<li class="d-flex justify-content-between">
+														<div>
+															<h6 class="mb-0">Child</h6>
+															<small>Ages 13 below</small>
+														</div>
+		
+														<div class="hstack gap-1 align-items-center">
+															<button type="button" class="btn btn-link child-remove p-0 mb-0" ><i class="bi bi-dash-circle fs-5 fa-fw"></i></button>
+															<h6 class="guest-selector-count mb-0 child">0</h6>
+															<button type="button" class="btn btn-link child-add p-0 mb-0" ><i class="bi bi-plus-circle fs-5 fa-fw"></i></button>
+														</div>
+													</li>
+		
+													<!-- Divider -->
+													<li class="dropdown-divider"></li>
+		
+													<!-- Rooms -->
+													<li class="d-flex justify-content-between">
+														<div>
+															<h6 class="mb-0">Rooms</h6>
+															<small>Max room 8</small>
+														</div>
+		
+														<div class="hstack gap-1 align-items-center">
+															<button type="button" class="btn btn-link room-remove p-0 mb-0" ><i class="bi bi-dash-circle fs-5 fa-fw"></i></button>
+															<h6 class="guest-selector-count mb-0 rooms">1</h6>
+															<button type="button" class="btn btn-link room-add p-0 mb-0" ><i class="bi bi-plus-circle fs-5 fa-fw"></i></button>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<span class="form-icon"><i class="bi bi-people fs-5"></i></span>
+										</div>
+									</div>
+
+									<!-- Date -->
+									<div class="col-lg-4">
+										<div class="form-icon-input form-fs-lg">
+											<input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/m/y" placeholder="Select check-in date">
+											<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+										</div>
+									</div>
+
+									<!-- Date -->
+									<div class="col-lg-4">
+										<div class="form-icon-input form-fs-lg">
+											<input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/m/y" placeholder="Select check-out date">
+											<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+										</div>
+									</div>
+
+								</div> <!-- Row END -->
+
+								<!-- Button -->
+								<div class="text-center pt-0">
+									<a class="btn btn-lg btn-primary mb-n7" href="#">Search Hotel <i class="bi bi-arrow-right ps-3"></i></a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- Tab content item END -->
+
+					<!-- Tab content item START -->
+					<div class="tab-pane fade" id="tab-1-2">
+						<form class="card shadow p-0">
+							<!-- Card header -->
+							<div class="card-header p-4">
+								<div class="row g-4 align-items-center">
+									<!-- Title -->
+									<div class="col-lg-4 col-xl-6">
+										<h5 class="mb-0"><i class="fa-solid fa-plane fa-fw me-2"></i>Flight Booking</h5>
+									</div>
+									<!-- Radio tab -->
+									<div class="col-md-6 col-lg-4 col-xl-3 ms-auto">
+										<div class="nav nav-pills" id="pills-tab" role="tablist">
+											<div class="form-check form-check-inline active" id="flight-one-way-tab" data-bs-toggle="pill" data-bs-target="#flight-one-way" role="tab" aria-controls="flight-one-way" aria-selected="true">
+												<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+												<label class="form-check-label" for="inlineRadio1">One Way</label>
+											</div>
+											<div class="form-check form-check-inline" id="flight-round-way-tab" data-bs-toggle="pill" data-bs-target="#flight-round-way" role="tab" aria-controls="flight-round-way" aria-selected="false">
+												<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+												<label class="form-check-label" for="inlineRadio2">Round Trip</label>
+											</div>
+										</div>
+									</div>
+									<!-- Select -->
+									<div class="col-md-6 col-lg-4 col-xl-3 ms-auto">
+										<div class="form-control-bg-light border rounded form-fs-md">
+											<select class="form-select js-choice" aria-label=".form-select-sm">
+												<option value="">Select Class</option>
+												<option>Economy</option>
+												<option>Premium Economy</option>
+												<option>Business</option>
+												<option>First Class</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card body -->
+							<div class="card-body p-4 pt-0">
+								<!-- Tab content START -->
+								<div class="tab-content" id="pills-tabContent">
+									<!-- One way tab START -->
+									<div class="tab-pane fade show active" id="flight-one-way" role="tabpanel" aria-labelledby="flight-one-way-tab">
+										<div class="row g-4">
+											<!-- From -->
+											<div class="col-md-6 position-relative">
+												<div class="form-icon-input form-size-lg form-fs-lg">
+													<select class="form-select js-choice" data-search-enabled="true">
+														<option value="">Flying from...</option>
+														<option>San Jacinto, USA</option>
+														<option>North Dakota, Canada</option>
+														<option>West Virginia, Paris</option>
+													</select>
+													<span class="form-icon"><i class="bi bi-geo-alt fs-5"></i></span>
+												</div>
+
+												<!-- Auto fill button -->
+												<div class="btn-flip-icon z-index-9">
+													<button class="btn btn-dark shadow btn-round mb-0"><i class="fa-solid fa-right-left"></i></button>
+												</div>
+											</div>
+
+											<!-- To -->
+											<div class="col-md-6">
+												<div class="form-icon-input form-size-lg form-fs-lg">
+													<select class="form-select js-choice" data-search-enabled="true">
+														<option value="">Flying to...</option>
+														<option>San Jacinto, USA</option>
+														<option>North Dakota, Canada</option>
+														<option>West Virginia, Paris</option>
+													</select>
+													<span class="form-icon"><i class="bi bi-send fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Date -->
+											<div class="col-md-6">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/M/Y"  placeholder="Select check-in date">
+													<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Guest -->
+											<div class="col-md-6">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg" placeholder="Select occupant">
+													<span class="form-icon"><i class="bi bi-people fs-5"></i></span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Button -->
+										<div class="text-center pt-0">
+											<a class="btn btn-lg btn-primary mb-n7" href="#">Search Flight <i class="bi bi-arrow-right ps-3"></i></a>
+										</div>
+									</div>
+									<!-- One way trip END -->
+
+									<!-- Round way tab START -->
+									<div class="tab-pane fade" id="flight-round-way" role="tabpanel" aria-labelledby="flight-round-way-tab">
+										<!-- One way trip START -->
+										<div class="row g-4">
+											<!-- From -->
+											<div class="col-md-6 position-relative">
+												<div class="form-icon-input form-size-lg form-fs-lg">
+													<select class="form-select js-choice" data-search-enabled="true">
+														<option value="">Flying from...</option>
+														<option>San Jacinto, USA</option>
+														<option>North Dakota, Canada</option>
+														<option>West Virginia, Paris</option>
+													</select>
+													<span class="form-icon"><i class="bi bi-geo-alt fs-5"></i></span>
+												</div>
+
+												<!-- Auto fill button -->
+												<div class="btn-flip-icon z-index-9">
+													<button class="btn btn-dark shadow btn-round mb-0"><i class="fa-solid fa-right-left"></i></button>
+												</div>
+											</div>
+
+											<!-- To -->
+											<div class="col-md-6">
+												<div class="form-icon-input form-size-lg form-fs-lg">
+													<select class="form-select js-choice" data-search-enabled="true">
+														<option value="">Flying to...</option>
+														<option>San Jacinto, USA</option>
+														<option>North Dakota, Canada</option>
+														<option>West Virginia, Paris</option>
+													</select>
+													<span class="form-icon"><i class="bi bi-send fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Date -->
+											<div class="col-md-4">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/M/Y" placeholder="Select check-in date">
+													<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Date -->
+											<div class="col-md-4">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/M/Y" placeholder="Select check-out date">
+													<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Guest -->
+											<div class="col-md-4">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg" placeholder="Select occupant">
+													<span class="form-icon"><i class="bi bi-people fs-5"></i></span>
+												</div>
+											</div>
+										</div>
+										<!-- Button -->
+										<div class="col-12 text-center pt-0">
+											<a class="btn btn-lg btn-primary mb-n7" href="#">Search Flight <i class="bi bi-arrow-right ps-3"></i></a>
+										</div>
+										<!-- One way trip END -->
+									</div>
+									<!-- Round way tab END -->
+								</div>
+								<!-- Tab content END -->
+							</div>	
+						</form>
+					</div>
+					<!-- Tab content item END -->
+
+					<!-- Tab content item START -->
+					<div class="tab-pane fade" id="tab-1-3">
+						<form class="card shadow p-0">
+							<!-- Card header -->
+							<div class="card-header p-4">
+								<h5 class="mb-0"><i class="fa-solid fa-globe-americas fa-fw me-2"></i>Tour Booking</h5>
+							</div>
+
+							<!-- Card body -->
+							<div class="card-body p-4 pt-0">
+								<div class="row g-4">
+									<!-- Location -->
+									<div class="col-lg-4">
+										<div class="form-icon-input form-size-lg form-fs-lg">
+											<select class="form-select js-choice" data-search-enabled="true">
+												<option value="">Select tour location</option>
+												<option>San Jacinto, USA</option>
+												<option>North Dakota, Canada</option>
+												<option>West Virginia, Paris</option>
+											</select>
+											<span class="form-icon"><i class="bi bi-geo-alt fs-5"></i></span>
+										</div>
+									</div>
+
+									<!-- Date -->
+									<div class="col-lg-4">
+										<div class="form-icon-input form-fs-lg">
+											<input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/M/Y" placeholder="Select date">
+											<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+										</div>
+									</div>
+
+									<!-- Guest -->
+									<div class="col-lg-4">
+										<div class="form-icon-input form-size-lg form-fs-lg">
+											<select class="form-select js-choice" data-search-enabled="true">
+												<option value="">Select tour type</option>
+												<option>Adventure</option>
+												<option>Beach</option>
+												<option>Desert</option>
+												<option>History</option>
+											</select>
+											<span class="form-icon"><i class="fa-solid fa-person-skating fs-5"></i></span>
+										</div>
+									</div>
+								</div> <!-- Row END -->
+
+								<!-- Button -->
+								<div class="text-center pt-0">
+									<a class="btn btn-lg btn-primary mb-n7" href="#">Search Tour <i class="bi bi-arrow-right ps-3"></i></a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- Tab content item END -->
+
+					<!-- Tab content item START -->
+					<div class="tab-pane fade" id="tab-1-4">
+						<form class="card shadow p-0">
+							<!-- Card header -->
+							<div class="card-header d-sm-flex justify-content-between align-items-center p-4">
+								<!-- Title -->
+								<h5 class="mb-3 mb-sm-0"><i class="fa-solid fa-car fa-fw me-2"></i>Cab Booking</h5>
+
+								<!-- Tabs -->
+								<ul class="nav nav-pills nav-pills-dark" id="pills-tab-2" role="tablist">
+									<li class="nav-item" role="presentation">
+										<button class="nav-link mb-0 rounded-start rounded-0 active" id="pills-one-way-2-tab" data-bs-toggle="pill" data-bs-target="#pills-one-way-2" type="button" role="tab" aria-selected="true">One Way</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link mb-0 rounded-end rounded-0" id="pills-round-way-2-tab" data-bs-toggle="pill" data-bs-target="#pills-round-way-2" type="button" role="tab" aria-selected="false">Road Trip</button>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Card body -->
+							<div class="card-body p-4 pt-0">
+								<!-- Tab content START -->
+								<div class="tab-content" id="pills-tabContent3">
+									<!-- One way tab START -->
+									<div class="tab-pane fade show active" id="pills-one-way-2" role="tabpanel" aria-labelledby="pills-one-way-2-tab">
+										<div class="row g-4">
+											<!-- Pickup -->
+											<div class="col-md-6 position-relative">
+												<div class="form-icon-input form-size-lg form-fs-lg">
+													<select class="form-select js-choice" data-search-enabled="true">
+														<option value="">Select pickup location</option>
+														<option>San Jacinto, USA</option>
+														<option>North Dakota, Canada</option>
+														<option>West Virginia, Paris</option>
+													</select>
+													<span class="form-icon"><i class="bi bi-geo-alt fs-5"></i></span>
+												</div>
+
+												<!-- Auto fill button -->
+												<div class="btn-flip-icon z-index-9">
+													<button class="btn btn-white shadow btn-round mb-0"><i class="fa-solid fa-right-left"></i></button>
+												</div>
+											</div>
+
+											<!-- Drop -->
+											<div class="col-md-6">
+												<div class="form-icon-input form-size-lg form-fs-lg">
+													<select class="form-select js-choice" data-search-enabled="true">
+														<option value="">Select drop location</option>
+														<option>San Jacinto, USA</option>
+														<option>North Dakota, Canada</option>
+														<option>West Virginia, Paris</option>
+													</select>
+													<span class="form-icon"><i class="bi bi-geo-alt fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Pickup date -->
+											<div class="col-md-6">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/M/Y" placeholder="Select pickup date">
+													<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Pickup time -->
+											<div class="col-md-6">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg flatpickr" placeholder="Select pickup time" data-noCalendar="true" data-enableTime="true">
+													<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+												</div>
+											</div>
+										</div> <!-- Row END -->
+										<!-- Button -->
+										<div class="text-center pt-0">
+											<a class="btn btn-lg btn-primary mb-n7" href="#">Search Cabs <i class="bi bi-arrow-right ps-3"></i></a>
+										</div>
+									</div>
+									<!-- One way tab END -->
+
+									<!-- Round way tab START -->
+									<div class="tab-pane fade" id="pills-round-way-2" role="tabpanel" aria-labelledby="pills-round-way-2-tab">
+										<div class="row g-4">
+											<!-- Pickup -->
+											<div class="col-md-6 position-relative">
+												<div class="form-icon-input form-size-lg form-fs-lg">
+													<select class="form-select js-choice" data-search-enabled="true">
+														<option value="">Select pickup location</option>
+														<option>San Jacinto, USA</option>
+														<option>North Dakota, Canada</option>
+														<option>West Virginia, Paris</option>
+													</select>
+													<span class="form-icon"><i class="bi bi-geo-alt fs-5"></i></span>
+												</div>
+
+												<!-- Auto fill button -->
+												<div class="btn-flip-icon z-index-9">
+													<button class="btn btn-white shadow btn-round mb-0"><i class="fa-solid fa-right-left"></i></button>
+												</div>
+											</div>
+
+											<!-- Drop -->
+											<div class="col-md-6">
+												<div class="form-icon-input form-size-lg form-fs-lg">
+													<select class="form-select js-choice" data-search-enabled="true">
+														<option value="">Select drop location</option>
+														<option>San Jacinto, USA</option>
+														<option>North Dakota, Canada</option>
+														<option>West Virginia, Paris</option>
+													</select>
+													<span class="form-icon"><i class="bi bi-geo-alt fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Pickup date -->
+											<div class="col-md-6 col-lg-3">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/M/Y" placeholder="Select pickup date">
+													<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Pickup time -->
+											<div class="col-md-6 col-lg-3">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg flatpickr" placeholder="Select pickup time" data-noCalendar="true" data-enableTime="true">
+													<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Drop date -->
+											<div class="col-md-6 col-lg-3">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/M/Y" placeholder="Select return date">
+													<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+												</div>
+											</div>
+
+											<!-- Drop time -->
+											<div class="col-md-6 col-lg-3">
+												<div class="form-icon-input form-fs-lg">
+													<input type="text" class="form-control form-control-lg flatpickr" placeholder="Select return time" data-noCalendar="true" data-enableTime="true">
+													<span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+												</div>
+											</div>
+										</div> <!-- Row END -->
+										<!-- Button -->
+										<div class="text-center pt-0">
+											<a class="btn btn-lg btn-primary mb-n7" href="#">Search cabs <i class="bi bi-arrow-right ps-3"></i></a>
+										</div>
+									</div>
+									<!-- Round way tab END -->
+								</div>		
+							</div>
+						</form>
+					</div>
+					<!-- Tab content item END -->
+
+				</div> 
+			</div>
+			<!-- Tab content END -->
+		</div>
+	</div>
+	<!-- Search END -->
+</section>
+<!-- =======================
+Main banner START -->
+
+<!-- =======================
+Category START -->
+<section>
+	<div class="container">
+		<div class="row g-4">
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/beach.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Beaches</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/island.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Islands</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/pool.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Amazing Pools</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/camping.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Camping</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/cabin.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Cabin</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/lake.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Lake Front</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/park.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">National Park</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/cave.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Caves</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/surf.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Surfing</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/farm.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Farms</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/tower.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Towers</a></h6>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+				<div class="card card-body bg-light h-100 align-items-center justify-content-center">
+					<div class="d-flex align-items-center">
+						<img src="assets/images/element/desert.svg" class="h-30px me-3" alt="">
+						<h6 class="card-title mb-0"><a href="#" class="stretched-link">Desert</a></h6>
+					</div> 
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- =======================
+Category END -->
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+Footer START -->
+<footer class="bg-dark pt-5">
+	<div class="container">
+		<!-- Row START -->
+		<div class="row g-4">
+
+			<!-- Widget 1 START -->
+			<div class="col-lg-3">
+				<!-- logo -->
+				<a href="index.html">
+					<img class="h-40px" src="assets/images/logo-light.svg" alt="logo">
+				</a>
+				<p class="my-3 text-muted">Departure defective arranging rapturous did believe him all had supported.</p>
+				<p class="mb-2"><a href="#" class="text-muted text-primary-hover"><i class="bi bi-telephone me-2"></i>+1234 568 963</a> </p>
+				<p class="mb-0"><a href="#" class="text-muted text-primary-hover"><i class="bi bi-envelope me-2"></i>example@gmail.com</a></p>
+			</div>
+			<!-- Widget 1 END -->
+
+			<!-- Widget 2 START -->
+			<div class="col-lg-8 ms-auto">
+				<div class="row g-4">
+					<!-- Link block -->
+					<div class="col-6 col-md-3">
+						<h5 class="text-white mb-2 mb-md-4">Page</h5>
+						<ul class="nav flex-column text-primary-hover">
+							<li class="nav-item"><a class="nav-link text-muted" href="#">About us</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Contact us</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">News and Blog</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Meet a Team</a></li>
+						</ul>
+					</div>
+
+					<!-- Link block -->
+					<div class="col-6 col-md-3">
+						<h5 class="text-white mb-2 mb-md-4">Link</h5>
+						<ul class="nav flex-column text-primary-hover">
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Sign up</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Sign in</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Privacy Policy</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Terms</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Cookie</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Support</a></li>
+						</ul>
+					</div>
+									
+					<!-- Link block -->
+					<div class="col-6 col-md-3">
+						<h5 class="text-white mb-2 mb-md-4">Global Site</h5>
+						<ul class="nav flex-column text-primary-hover">
+							<li class="nav-item"><a class="nav-link text-muted" href="#">India</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">California</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Indonesia</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Canada</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#">Malaysia</a></li>
+						</ul>
+					</div>
+
+					<!-- Link block -->
+					<div class="col-6 col-md-3">
+						<h5 class="text-white mb-2 mb-md-4">Booking</h5>
+						<ul class="nav flex-column text-primary-hover">
+							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-hotel me-2"></i>Hotel</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-plane me-2"></i>Flight</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-globe-americas me-2"></i>Tour</a></li>
+							<li class="nav-item"><a class="nav-link text-muted" href="#"><i class="fa-solid fa-car me-2"></i>Cabs</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Widget 2 END -->
+
+		</div><!-- Row END -->
+
+		<!-- Tops Links -->
+		<div class="row mt-5">
+			<h5 class="mb-2 text-white">Top Links</h5>
+			<ul class="list-inline text-primary-hover lh-lg">
+				<li class="list-inline-item"><a href="#" class="text-muted">Flights</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Hotels</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Tours</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Cabs</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">About</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Contact us</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Blogs</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Services</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Detail page</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Services</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Policy</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Testimonials</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Newsletters</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Podcasts</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Protests</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">NewsCyber</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Education</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Sports</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Tech and Auto</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Opinion</a></li>
+				<li class="list-inline-item"><a href="#" class="text-muted">Share Market</a></li>
+			</ul>
+		</div>
+
+		<!-- Payment and card -->
+		<div class="row g-4 justify-content-between mt-0 mt-md-2">
+
+			<!-- Payment card -->
+			<div class="col-sm-7 col-md-6 col-lg-4">
+				<h5 class="text-white mb-2">Payment & Security</h5>
+				<ul class="list-inline mb-0 mt-3">
+					<li class="list-inline-item"> <a href="#"><img src="assets/images/element/paypal.svg" class="h-30px" alt=""></a></li>
+					<li class="list-inline-item"> <a href="#"><img src="assets/images/element/visa.svg" class="h-30px" alt=""></a></li>
+					<li class="list-inline-item"> <a href="#"><img src="assets/images/element/mastercard.svg" class="h-30px" alt=""></a></li>
+					<li class="list-inline-item"> <a href="#"><img src="assets/images/element/expresscard.svg" class="h-30px" alt=""></a></li>
+				</ul>
+			</div>
+
+			<!-- Social media icon -->
+			<div class="col-sm-5 col-md-6 col-lg-3 text-sm-end">
+				<h5 class="text-white mb-2">Follow us on</h5>
+				<ul class="list-inline mb-0 mt-3">
+					<li class="list-inline-item"> <a class="btn btn-sm px-2 bg-facebook mb-0" href="#"><i class="fab fa-fw fa-facebook-f"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-sm shadow px-2 bg-instagram mb-0" href="#"><i class="fab fa-fw fa-instagram"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-sm shadow px-2 bg-twitter mb-0" href="#"><i class="fab fa-fw fa-twitter"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-sm shadow px-2 bg-linkedin mb-0" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a> </li>
+				</ul>	
+			</div>
+		</div>
+
+		<!-- Divider -->
+		<hr class="mt-4 mb-0">
+
+		<!-- Bottom footer -->
+		<div class="row">
+			<div class="container">
+				<div class="d-lg-flex justify-content-between align-items-center py-3 text-center text-lg-start">
+					<!-- copyright text -->
+					<div class="text-muted text-primary-hover"> Copyrights ©2023 Booking. Build by <a href="https://www.webestica.com/" class="text-muted">Webestica</a>. </div>
+					<!-- copyright links-->
+					<div class="nav mt-2 mt-lg-0">
+						<ul class="list-inline text-primary-hover mx-auto mb-0">
+							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="#">Privacy policy</a></li>
+							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted" href="#">Terms and conditions</a></li>
+							<li class="list-inline-item me-0"><a class="nav-link py-1 text-muted pe-0" href="#">Refund policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- =======================
+Footer END -->
+
+<!-- Back to top -->
+<div class="back-top"></div>
+
+<!-- Bootstrap JS -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Vendors -->
+<script src="assets/vendor/choices/js/choices.min.js"></script>
+<script src="assets/vendor/flatpickr/js/flatpickr.min.js"></script>
+
+<!-- ThemeFunctions -->
+<script src="assets/js/functions.js"></script>
+
+</body>
+</html>

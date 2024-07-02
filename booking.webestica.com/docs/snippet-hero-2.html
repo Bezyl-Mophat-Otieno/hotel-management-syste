@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Doc - Booking Theme</title>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/css/flatpickr.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/prism.css">
+
+</head>
+
+<body>
+
+<!-- Top alert START -->
+<div class="alert alert-warning py-2 m-0 bg-primary border-0 rounded-0 alert-dismissible fade show text-center overflow-hidden" role="alert">
+	<p class="text-white m-0">Traveling internationally? Get update information on COVID-19 travel guidance and restrictions<a href="#" class="btn btn-xs btn-dark ms-2 mb-0">Learn more!</a></p>
+	<!-- Close button -->
+	<button type="button" class="btn-close btn-close-white opacity-9 p-3" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<!-- Top alert END -->
+
+<!-- Header START -->
+<header class="navbar-light header-sticky">
+	<!-- Logo Nav START -->
+	<nav class="navbar navbar-expand-xl">
+		<div class="container">
+			<!-- Logo START -->
+			<a class="navbar-brand" href="#">
+				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+			</a>
+			<!-- Logo END -->
+			
+			<!-- Responsive navbar toggler -->
+			<button class="navbar-toggler ms-auto mx-3 me-xl-0 p-0 p-sm-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-animation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+
+			<!-- Main navbar START -->
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<!-- Nav traveler menu START -->
+				<ul class="navbar-nav navbar-nav-scroll me-auto">
+					<!-- Nav item 1 Demos -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle rounded px-3 py-3 py-xl-0" href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa-solid fa-suitcase-rolling"></i> Travelers
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="categoryMenu">
+	
+							<!-- Hotels -->
+							<li class="mb-1">
+								<a href="#" class="dropdown-item bg-light-hover d-flex align-items-center rounded p-2">
+									<!-- Icon -->
+									<div class="icon-md bg-primary bg-opacity-10 rounded text-primary flex-shrink-0"><i class="fa-solid fa-hotel"></i></div>
+									<div class="ms-2">
+										<h6 class="mb-0">Hotels</h6>
+										<p class="small mb-0 text-body">Small description here</p>
+									</div>
+								</a>	
+							</li>
+							
+							<!-- Flights -->
+							<li class="mb-1">
+								<a href="#" class="dropdown-item bg-light-hover d-flex align-items-center rounded p-2 active">
+									<!-- Icon -->
+									<div class="icon-md bg-primary bg-opacity-10 rounded text-primary flex-shrink-0"><i class="fa-solid fa-plane"></i></div>
+									<div class="ms-2">
+										<h6 class="mb-0">Flights</h6>
+										<p class="small mb-0 text-body">Small description here</p>
+									</div>
+								</a>	
+							</li>
+	
+							<!-- Tour -->
+							<li class="mb-1">
+								<a href="#" class="dropdown-item bg-light-hover d-flex align-items-center rounded p-2">
+									<!-- Icon -->
+									<div class="icon-md bg-primary bg-opacity-10 rounded text-primary flex-shrink-0"><i class="fa-solid fa-earth-americas"></i></div>
+									<div class="ms-2">
+										<h6 class="mb-0">Tour</h6>
+										<p class="small mb-0 text-body">Small description here</p>
+									</div>
+								</a>	
+							</li>
+	
+							<!-- Cabs -->
+							<li class="mb-1">
+								<a href="#" class="dropdown-item bg-light-hover d-flex align-items-center rounded p-2">
+									<!-- Icon -->
+									<div class="icon-md bg-primary bg-opacity-10 rounded text-primary flex-shrink-0"><i class="fa-solid fa-car"></i></div>
+									<div class="ms-2">
+										<h6 class="mb-0">Cab</h6>
+										<p class="small mb-0 text-body">Small description here</p>
+									</div>
+								</a>	
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- Nav traveler menu END -->
+
+				<!-- Nav main menu START -->
+				<ul class="navbar-nav navbar-nav-scroll me-auto">
+					<!-- Nav item Listing -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="listingMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listings</a>
+						<ul class="dropdown-menu" aria-labelledby="listingMenu">
+							<!-- Dropdown submenu -->
+							<li> <a class="dropdown-item" href="#">Menu Item</a></li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">submenu Items</a>
+								<ul class="dropdown-menu" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="#">Submenu item 1</a></li>
+									<li> <a class="dropdown-item" href="#">Submenu item 2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Nav item Pages -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+						<ul class="dropdown-menu" aria-labelledby="pageMenu">
+							<!-- Dropdown submenu -->
+							<li> <a class="dropdown-item" href="#">Menu Item 1</a></li>
+							<li> <a class="dropdown-item" href="#">Menu Item 2</a></li>
+						</ul>
+					</li>
+
+					<!-- Nav item Account -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="accountMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accounts</a>
+						<ul class="dropdown-menu" aria-labelledby="accountMenu">
+							<!-- Dropdown submenu -->
+							<li> <a class="dropdown-item" href="#">Menu Item 1</a></li>
+							<li> <a class="dropdown-item" href="#">Menu Item 2</a></li>
+						</ul>
+					</li>
+
+					<!-- Nav item link-->
+					<li class="nav-item "> <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a> </li>
+				</ul>
+				<!-- Nav main menu END -->
+			</div>
+			<!-- Main navbar END -->
+
+			<!-- Navbar right side START -->
+			<ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
+				<!-- Dark mode switch -->
+				<li class="nav-item dropdown me-2">
+					<button class="btn btn-link text-warning p-0 mb-0" id="bd-theme"
+					type="button"
+					aria-expanded="false"
+					data-bs-toggle="dropdown"
+					data-bs-display="static">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-circle-half theme-icon-active fa-fw" viewBox="0 0 16 16">
+						<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+						<use href="#"></use>
+					</svg>
+					</button>
+
+					<ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme">
+						<li class="mb-1">
+							<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+								<svg width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
+									<path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+									<use href="#"></use>
+								</svg>Light
+							</button>
+						</li>
+						<li class="mb-1">
+							<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
+									<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+									<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+									<use href="#"></use>
+								</svg>Dark
+							</button>
+						</li>
+						<li>
+							<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch me-1" viewBox="0 0 16 16">
+									<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+									<use href="#"></use>
+								</svg>Auto
+							</button>
+						</li>
+					</ul>
+				</li>
+				<!-- Search -->
+				<li class="nav-item dropdown nav-search me-2">
+					<a class="nav-link mb-0 py-0" role="button" href="#" id="navSearch" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-display="static">
+						<i class="bi bi-search fs-5"> </i>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end shadow rounded p-2" aria-labelledby="navSearch">
+						<form class="input-group">
+							<input class="form-control border-primary" type="search" placeholder="Search..." aria-label="Search">
+							<button class="btn btn-primary m-0" type="submit">Search</button>
+						</form>
+					</div>
+				</li>
+
+				<!-- Sign In button -->
+				<li class="nav-item ms-2 d-none d-sm-block">
+					<a href="#" class="btn btn-sm btn-primary-soft mb-0"><i class="fa-solid fa-right-to-bracket me-2"></i>Sign Up</a>
+				</li>
+			</ul>
+			<!-- Navbar right side END -->
+
+		</div>
+	</nav>
+	<!-- Logo Nav END -->
+</header>
+<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Main Banner START -->
+<section class="py-0">
+	<div class="container">
+		<!-- Background image -->
+		<div class="rounded-3 p-3 p-sm-5" style="background-image: url(assets/images/bg/01.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+			<!-- Banner title -->
+			<div class="row"> 
+				<div class="col-md-10 mx-auto text-center"> 
+					<h1 class="text-dark display-3 pt-sm-5 my-5">Ready to take off?</h1>
+				</div>
+			</div>
+
+			<!-- Booking from START -->
+			<form class="bg-mode position-relative px-3 px-sm-4 pt-4 mb-4 mb-sm-0">
+
+				<!-- Svg decoration -->
+				<figure class="position-absolute top-0 start-0 h-100 ms-n2 ms-sm-n1">
+					<svg class="h-100" viewBox="0 0 12.9 324" style="enable-background:new 0 0 12.9 324;">
+						<path class="fill-mode" d="M9.8,316.4c1.1-26.8,2-53.4,1.9-80.2c-0.1-18.2-0.8-36.4-1.2-54.6c-0.2-8.9-0.2-17.7,0.8-26.6 c0.5-4.5,1.1-9,1.4-13.6c0.1-1.9,0.1-3.7,0.1-5.6c-0.2-0.2-0.6-1.5-0.2-3.1c-0.3-1.8-0.4-3.7-0.4-5.5c-1.2-3-1.8-6.3-1.7-9.6 c0.9-19,0.5-38.1,0.8-57.2c0.3-17.1,0.6-34.2,0.2-51.3c-0.1-0.6-0.1-1.2-0.1-1.7c0-0.8,0-1.6,0-2.4c0-0.5,0-1.1,0-1.6 c0-1.2,0-2.3,0.2-3.5H0v11.8c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1V31c3.3,0,6.1,2.7,6.1,6.1S3.3,43.3,0,43.3v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1 s-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1 c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.7,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.7,6.1,6.1 c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1V324h9.5C9.6,321.4,9.7,318.8,9.8,316.4z"/>
+					</svg>
+				</figure>
+
+				<!-- Svg decoration -->
+				<figure class="position-absolute top-0 end-0 h-100 rotate-180 me-n2 me-sm-n1">
+					<svg class="h-100" viewBox="0 0 21 324" style="enable-background:new 0 0 21 324;">
+						<path class="fill-mode" d="M9.8,316.4c1.1-26.8,2-53.4,1.9-80.2c-0.1-18.2-0.8-36.4-1.2-54.6c-0.2-8.9-0.2-17.7,0.8-26.6 c0.5-4.5,1.1-9,1.4-13.6c0.1-1.9,0.1-3.7,0.1-5.6c-0.2-0.2-0.6-1.5-0.2-3.1c-0.3-1.8-0.4-3.7-0.4-5.5c-1.2-3-1.8-6.3-1.7-9.6 c0.9-19,0.5-38.1,0.8-57.2c0.3-17.1,0.6-34.2,0.2-51.3c-0.1-0.6-0.1-1.2-0.1-1.7c0-0.8,0-1.6,0-2.4c0-0.5,0-1.1,0-1.6 c0-1.2,0-2.3,0.2-3.5H0v11.8c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1V31c3.3,0,6.1,2.7,6.1,6.1S3.3,43.3,0,43.3v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1 s-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1 c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.7,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.7,6.1,6.1 c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1V324h9.5C9.6,321.4,9.7,318.8,9.8,316.4z"/>
+					</svg>
+				</figure>
+
+				<div class="row g-4">
+
+					<!-- Nav tabs START -->
+					<div class="col-lg-6">
+						<ul class="nav nav-pills nav-pills-dark" id="pills-tab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link mb-0 active" id="pills-one-way-tab" data-bs-toggle="pill" data-bs-target="#pills-one-way" type="button" role="tab" aria-selected="true">One Way</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link mb-0" id="pills-round-trip-tab" data-bs-toggle="pill" data-bs-target="#pills-round-trip" type="button" role="tab" aria-selected="false">Round Trip</button>
+							</li>
+						</ul>
+					</div>
+					<!-- Nav tabs END -->
+
+					<!-- Ticket class -->
+					<div class="col-lg-3 ms-auto">
+						<div class="form-control-bg-light form-fs-md">
+							<select class="form-select js-choice">
+								<option value="">Select Class</option>
+								<option>Economy</option>
+								<option>Premium Economy</option>
+								<option>Business</option>
+								<option>First Class</option>
+							</select>
+						</div>	
+					</div>
+
+					<!-- Ticket Travelers -->
+					<div class="col-lg-3 ms-auto">
+						<div class="form-control-bg-light form-fs-md">
+							<select class="form-select js-choice">
+								<option value="">Select Travelers</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						</div>	
+					</div>
+
+					<!-- Tab content START -->
+					<div class="tab-content mt-4" id="pills-tabContent">
+						<!-- One way tab START -->
+						<div class="tab-pane fade show active" id="pills-one-way" role="tabpanel" aria-labelledby="pills-one-way-tab">
+							<div class="row g-4">
+								<!-- Leaving From -->
+								<div class="col-md-6 col-lg-4 position-relative">
+									<div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3">
+										<!-- Input field -->
+										<label class="mb-1"><i class="bi bi-geo-alt me-2"></i>From</label>
+										<select class="form-select js-choice" data-search-enabled="true">
+											<option value="">Select location</option>
+											<option>San Jacinto, USA</option>
+											<option>North Dakota, Canada</option>
+											<option>West Virginia, Paris</option>
+										</select>
+									</div>
+
+									<!-- Auto fill button -->
+									<div class="btn-flip-icon mt-3 mt-md-0">
+										<button class="btn btn-white shadow btn-round mb-0"><i class="fa-solid fa-right-left"></i></button>
+								</div>
+								</div>
+
+								<!-- Going To -->
+								<div class="col-md-6 col-lg-4">
+									<div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3">
+										<!-- Input field -->
+										<label class="mb-1"><i class="bi bi-send me-2"></i>To</label>
+										<select class="form-select js-choice" data-search-enabled="true">
+											<option value="">Select location</option>
+											<option>San Jacinto, USA</option>
+											<option>North Dakota, Canada</option>
+											<option>West Virginia, Paris</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- Departure -->
+								<div class="col-lg-4">
+									<div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3">
+										<label class="mb-1"><i class="bi bi-calendar me-2"></i>Departure</label>
+										<input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date">
+									</div>
+								</div>
+
+								<div class="col-12 text-end pt-0">
+									<a  class="btn btn-primary mb-n4" href="#">Find ticket <i class="bi bi-arrow-right ps-3"></i></a>
+								</div>
+							</div>
+						</div>
+						<!-- One way tab END -->
+
+						<!-- Round way tab END -->
+						<div class="tab-pane fade" id="pills-round-trip" role="tabpanel" aria-labelledby="pills-round-trip-tab">
+							<div class="row g-4">
+
+								<!-- Leaving From -->
+								<div class="col-md-6 col-xl-3 position-relative">
+									<div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3">
+										<!-- Input field -->
+										<label class="mb-1"><i class="bi bi-geo-alt me-2"></i>From</label>
+										<select class="form-select js-choice" data-search-enabled="true">
+											<option value="">Select location</option>
+											<option>San Jacinto, USA</option>
+											<option>North Dakota, Canada</option>
+											<option>West Virginia, Paris</option>
+										</select>
+									</div>
+									
+									<!-- Auto fill button -->
+									<div class="btn-flip-icon mt-3 mt-md-0">
+										<button class="btn btn-white shadow btn-round mb-0"><i class="fa-solid fa-right-left"></i></button>
+									</div>
+								</div>
+
+								<!-- Going To -->
+								<div class="col-md-6 col-xl-3">
+									<div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3">
+										<!-- Input field -->
+										<label class="mb-1"><i class="bi bi-send me-2"></i>To</label>
+										<select class="form-select js-choice" data-search-enabled="true">
+											<option value="">Select location</option>
+											<option>San Jacinto, USA</option>
+											<option>North Dakota, Canada</option>
+											<option>West Virginia, Paris</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- Departure -->
+								<div class="col-md-6 col-xl-3">
+									<div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3">
+										<label class="mb-1"><i class="bi bi-calendar me-2"></i>Departure</label>
+										<input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date">
+									</div>
+								</div>
+
+								<!-- Return -->
+								<div class="col-md-6 col-xl-3">
+									<div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3">
+										<label class="mb-1"><i class="bi bi-calendar me-2"></i>Return</label>
+										<input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date">
+									</div>
+								</div>
+
+								<div class="col-12 text-end pt-0">
+									<a  class="btn btn-primary mb-n4" href="#">Find ticket <i class="bi bi-arrow-right ps-3"></i></a>
+								</div>
+							</div>
+						</div>
+						<!-- Round way tab END -->
+					</div>
+					<!-- Tab content END -->
+				</div>
+			</form>
+			<!-- Booking from END -->
+		</div>
+	</div>
+</section>
+<!-- =======================
+Main Banner END -->
+
+<!-- =======================
+Code START -->
+<section>
+	<div class="container">
+		<div class="col-10 mx-auto">
+			<!-- Card START -->
+			<div class="card shadow p-0">
+				<!-- Card header -->
+				<div class="card-header border-bottom d-flex justify-content-between p-3 py-0">
+					<ul class="nav nav-tabs nav-tabs-line">
+						<li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab" href="#tab-1">HTML</a> </li>
+						<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Plugins</a> </li>
+					</ul>
+				</div>
+
+				<!-- Card body START -->
+				<div class="card-body p-3 py-0">
+					<div class="tab-content">
+						<!-- Html tab -->
+						<div class="tab-pane show active" id="tab-1">
+							<div class="position-relative">
+								<pre id="copy-1" class="my-3 h-400px language-markup"><code class="language-markup" data-lang="html">&lt;!-- =======================
+Main Banner START --&gt;
+&lt;section class="py-0"&gt;
+	&lt;div class="container"&gt;
+		&lt;!-- Background image --&gt;
+		&lt;div class="rounded-3 p-3 p-sm-5" style="background-image: url(assets/images/bg/01.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;"&gt;
+			&lt;!-- Banner title --&gt;
+			&lt;div class="row"&gt; 
+				&lt;div class="col-md-10 mx-auto text-center"&gt; 
+					&lt;h1 class="text-dark display-3 pt-sm-5 my-5"&gt;Ready to take off?&lt;/h1&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;!-- Booking from START --&gt;
+			&lt;form class="bg-mode position-relative px-3 px-sm-4 pt-4 mb-4 mb-sm-0"&gt;
+
+				&lt;!-- Svg decoration --&gt;
+				&lt;figure class="position-absolute top-0 start-0 h-100 ms-n2 ms-sm-n1"&gt;
+					&lt;svg class="h-100" viewBox="0 0 12.9 324" style="enable-background:new 0 0 12.9 324;"&gt;
+						&lt;path class="fill-mode" d="M9.8,316.4c1.1-26.8,2-53.4,1.9-80.2c-0.1-18.2-0.8-36.4-1.2-54.6c-0.2-8.9-0.2-17.7,0.8-26.6 c0.5-4.5,1.1-9,1.4-13.6c0.1-1.9,0.1-3.7,0.1-5.6c-0.2-0.2-0.6-1.5-0.2-3.1c-0.3-1.8-0.4-3.7-0.4-5.5c-1.2-3-1.8-6.3-1.7-9.6 c0.9-19,0.5-38.1,0.8-57.2c0.3-17.1,0.6-34.2,0.2-51.3c-0.1-0.6-0.1-1.2-0.1-1.7c0-0.8,0-1.6,0-2.4c0-0.5,0-1.1,0-1.6 c0-1.2,0-2.3,0.2-3.5H0v11.8c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1V31c3.3,0,6.1,2.7,6.1,6.1S3.3,43.3,0,43.3v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1 s-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1 c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.7,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.7,6.1,6.1 c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1V324h9.5C9.6,321.4,9.7,318.8,9.8,316.4z"/&gt;
+					&lt;/svg&gt;
+				&lt;/figure&gt;
+
+				&lt;!-- Svg decoration --&gt;
+				&lt;figure class="position-absolute top-0 end-0 h-100 rotate-180 me-n2 me-sm-n1"&gt;
+					&lt;svg class="h-100" viewBox="0 0 21 324" style="enable-background:new 0 0 21 324;"&gt;
+						&lt;path class="fill-mode" d="M9.8,316.4c1.1-26.8,2-53.4,1.9-80.2c-0.1-18.2-0.8-36.4-1.2-54.6c-0.2-8.9-0.2-17.7,0.8-26.6 c0.5-4.5,1.1-9,1.4-13.6c0.1-1.9,0.1-3.7,0.1-5.6c-0.2-0.2-0.6-1.5-0.2-3.1c-0.3-1.8-0.4-3.7-0.4-5.5c-1.2-3-1.8-6.3-1.7-9.6 c0.9-19,0.5-38.1,0.8-57.2c0.3-17.1,0.6-34.2,0.2-51.3c-0.1-0.6-0.1-1.2-0.1-1.7c0-0.8,0-1.6,0-2.4c0-0.5,0-1.1,0-1.6 c0-1.2,0-2.3,0.2-3.5H0v11.8c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1V31c3.3,0,6.1,2.7,6.1,6.1S3.3,43.3,0,43.3v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1 s-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1 c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.7,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9 c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.7,6.1,6.1 c0,3.4-2.8,6.1-6.1,6.1v6.9c3.3,0,6.1,2.8,6.1,6.1c0,3.4-2.8,6.1-6.1,6.1V324h9.5C9.6,321.4,9.7,318.8,9.8,316.4z"/&gt;
+					&lt;/svg&gt;
+				&lt;/figure&gt;
+
+				&lt;div class="row g-4"&gt;
+
+					&lt;!-- Nav tabs START --&gt;
+					&lt;div class="col-lg-6"&gt;
+						&lt;ul class="nav nav-pills nav-pills-dark" id="pills-tab" role="tablist"&gt;
+							&lt;li class="nav-item" role="presentation"&gt;
+								&lt;button class="nav-link mb-0 active" id="pills-one-way-tab" data-bs-toggle="pill" data-bs-target="#pills-one-way" type="button" role="tab" aria-selected="true"&gt;One Way&lt;/button&gt;
+							&lt;/li&gt;
+							&lt;li class="nav-item" role="presentation"&gt;
+								&lt;button class="nav-link mb-0" id="pills-round-trip-tab" data-bs-toggle="pill" data-bs-target="#pills-round-trip" type="button" role="tab" aria-selected="false"&gt;Round Trip&lt;/button&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/div&gt;
+					&lt;!-- Nav tabs END --&gt;
+
+					&lt;!-- Ticket class --&gt;
+					&lt;div class="col-lg-3 ms-auto"&gt;
+						&lt;div class="form-control-bg-light form-fs-md"&gt;
+							&lt;select class="form-select js-choice"&gt;
+								&lt;option value=""&gt;Select Class&lt;/option&gt;
+								&lt;option&gt;Economy&lt;/option&gt;
+								&lt;option&gt;Premium Economy&lt;/option&gt;
+								&lt;option&gt;Business&lt;/option&gt;
+								&lt;option&gt;First Class&lt;/option&gt;
+							&lt;/select&gt;
+						&lt;/div&gt;	
+					&lt;/div&gt;
+
+					&lt;!-- Ticket Travelers --&gt;
+					&lt;div class="col-lg-3 ms-auto"&gt;
+						&lt;div class="form-control-bg-light form-fs-md"&gt;
+							&lt;select class="form-select js-choice"&gt;
+								&lt;option value=""&gt;Select Travelers&lt;/option&gt;
+								&lt;option&gt;1&lt;/option&gt;
+								&lt;option&gt;2&lt;/option&gt;
+								&lt;option&gt;3&lt;/option&gt;
+								&lt;option&gt;4&lt;/option&gt;
+							&lt;/select&gt;
+						&lt;/div&gt;	
+					&lt;/div&gt;
+
+					&lt;!-- Tab content START --&gt;
+					&lt;div class="tab-content mt-4" id="pills-tabContent"&gt;
+						&lt;!-- One way tab START --&gt;
+						&lt;div class="tab-pane fade show active" id="pills-one-way" role="tabpanel" aria-labelledby="pills-one-way-tab"&gt;
+							&lt;div class="row g-4"&gt;
+								&lt;!-- Leaving From --&gt;
+								&lt;div class="col-md-6 col-lg-4 position-relative"&gt;
+									&lt;div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3"&gt;
+										&lt;!-- Input field --&gt;
+										&lt;label class="mb-1"&gt;&lt;i class="bi bi-geo-alt me-2"&gt;&lt;/i&gt;From&lt;/label&gt;
+										&lt;select class="form-select js-choice" data-search-enabled="true"&gt;
+											&lt;option value=""&gt;Select location&lt;/option&gt;
+											&lt;option&gt;San Jacinto, USA&lt;/option&gt;
+											&lt;option&gt;North Dakota, Canada&lt;/option&gt;
+											&lt;option&gt;West Virginia, Paris&lt;/option&gt;
+										&lt;/select&gt;
+									&lt;/div&gt;
+
+									&lt;!-- Auto fill button --&gt;
+									&lt;div class="btn-flip-icon mt-3 mt-md-0"&gt;
+										&lt;button class="btn btn-white shadow btn-round mb-0"&gt;&lt;i class="fa-solid fa-right-left"&gt;&lt;/i&gt;&lt;/button&gt;
+								&lt;/div&gt;
+								&lt;/div&gt;
+
+								&lt;!-- Going To --&gt;
+								&lt;div class="col-md-6 col-lg-4"&gt;
+									&lt;div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3"&gt;
+										&lt;!-- Input field --&gt;
+										&lt;label class="mb-1"&gt;&lt;i class="bi bi-send me-2"&gt;&lt;/i&gt;To&lt;/label&gt;
+										&lt;select class="form-select js-choice" data-search-enabled="true"&gt;
+											&lt;option value=""&gt;Select location&lt;/option&gt;
+											&lt;option&gt;San Jacinto, USA&lt;/option&gt;
+											&lt;option&gt;North Dakota, Canada&lt;/option&gt;
+											&lt;option&gt;West Virginia, Paris&lt;/option&gt;
+										&lt;/select&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+
+								&lt;!-- Departure --&gt;
+								&lt;div class="col-lg-4"&gt;
+									&lt;div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3"&gt;
+										&lt;label class="mb-1"&gt;&lt;i class="bi bi-calendar me-2"&gt;&lt;/i&gt;Departure&lt;/label&gt;
+										&lt;input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date"&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+
+								&lt;div class="col-12 text-end pt-0"&gt;
+									&lt;a  class="btn btn-primary mb-n4" href="#"&gt;Find ticket &lt;i class="bi bi-arrow-right ps-3"&gt;&lt;/i&gt;&lt;/a&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- One way tab END --&gt;
+
+						&lt;!-- Round way tab END --&gt;
+						&lt;div class="tab-pane fade" id="pills-round-trip" role="tabpanel" aria-labelledby="pills-round-trip-tab"&gt;
+							&lt;div class="row g-4"&gt;
+
+								&lt;!-- Leaving From --&gt;
+								&lt;div class="col-md-6 col-xl-3 position-relative"&gt;
+									&lt;div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3"&gt;
+										&lt;!-- Input field --&gt;
+										&lt;label class="mb-1"&gt;&lt;i class="bi bi-geo-alt me-2"&gt;&lt;/i&gt;From&lt;/label&gt;
+										&lt;select class="form-select js-choice" data-search-enabled="true"&gt;
+											&lt;option value=""&gt;Select location&lt;/option&gt;
+											&lt;option&gt;San Jacinto, USA&lt;/option&gt;
+											&lt;option&gt;North Dakota, Canada&lt;/option&gt;
+											&lt;option&gt;West Virginia, Paris&lt;/option&gt;
+										&lt;/select&gt;
+									&lt;/div&gt;
+									
+									&lt;!-- Auto fill button --&gt;
+									&lt;div class="btn-flip-icon mt-3 mt-md-0"&gt;
+										&lt;button class="btn btn-white shadow btn-round mb-0"&gt;&lt;i class="fa-solid fa-right-left"&gt;&lt;/i&gt;&lt;/button&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+
+								&lt;!-- Going To --&gt;
+								&lt;div class="col-md-6 col-xl-3"&gt;
+									&lt;div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3"&gt;
+										&lt;!-- Input field --&gt;
+										&lt;label class="mb-1"&gt;&lt;i class="bi bi-send me-2"&gt;&lt;/i&gt;To&lt;/label&gt;
+										&lt;select class="form-select js-choice" data-search-enabled="true"&gt;
+											&lt;option value=""&gt;Select location&lt;/option&gt;
+											&lt;option&gt;San Jacinto, USA&lt;/option&gt;
+											&lt;option&gt;North Dakota, Canada&lt;/option&gt;
+											&lt;option&gt;West Virginia, Paris&lt;/option&gt;
+										&lt;/select&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+
+								&lt;!-- Departure --&gt;
+								&lt;div class="col-md-6 col-xl-3"&gt;
+									&lt;div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3"&gt;
+										&lt;label class="mb-1"&gt;&lt;i class="bi bi-calendar me-2"&gt;&lt;/i&gt;Departure&lt;/label&gt;
+										&lt;input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date"&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+
+								&lt;!-- Return --&gt;
+								&lt;div class="col-md-6 col-xl-3"&gt;
+									&lt;div class="form-border-transparent form-fs-lg bg-light rounded-3 h-100 p-3"&gt;
+										&lt;label class="mb-1"&gt;&lt;i class="bi bi-calendar me-2"&gt;&lt;/i&gt;Return&lt;/label&gt;
+										&lt;input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date"&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+
+								&lt;div class="col-12 text-end pt-0"&gt;
+									&lt;a  class="btn btn-primary mb-n4" href="#"&gt;Find ticket &lt;i class="bi bi-arrow-right ps-3"&gt;&lt;/i&gt;&lt;/a&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- Round way tab END --&gt;
+					&lt;/div&gt;
+					&lt;!-- Tab content END --&gt;
+				&lt;/div&gt;
+			&lt;/form&gt;
+			&lt;!-- Booking from END --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- =======================
+Main Banner END --&gt;
+									
+								</code></pre>
+								<button id="copy_id-1" data-clipboard-action="copy" data-clipboard-target="#copy-1" class="copy-link btn btn-primary btn-sm">Copy</button>
+							</div>
+						</div>
+
+						<!-- Plugin tab -->
+						<div class="tab-pane" id="tab-3">
+							<!-- Css link -->
+							<div class="mt-4">
+								<p>Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> to load the CSS.</p>
+								<div class="position-relative">
+									<pre id="copy-3" class="">
+										<code class="language-markup" data-lang="html">
+&lt;link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/css/flatpickr.min.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css"&gt;
+											</code></pre>
+									<button id="copy_id-3" data-clipboard-action="copy" data-clipboard-target="#copy-3" class="copy-link btn btn-primary btn-sm mb-0">Copy</button>
+								</div>
+							</div>
+
+							<!-- Script link  -->
+							<div class="mt-4">
+								<p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <b>Vendors</b> to enable it.</p>
+								<div class="position-relative">
+									<pre id="copy-4" class="">
+										<code class="language-markup" data-lang="html">
+&lt;script src="assets/vendor/flatpickr/js/flatpickr.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/vendor/choices/js/choices.min.js"&gt;&lt;/script&gt;
+										</code></pre>
+									<button id="copy_id-4" data-clipboard-action="copy" data-clipboard-target="#copy-4" class="copy-link btn btn-primary btn-sm mb-0">Copy</button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Card body END -->
+
+			</div>
+			<!-- Card END -->
+		</div>
+	</div>
+</section>
+<!-- =======================
+Code END -->
+
+</main>
+
+<!-- =======================
+JavaScripts -->
+
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/simple-scrollbar.min.js"></script>
+<script src="assets/js/prism.js"></script>
+<script src="assets/js/clipboard.min.js"></script>
+<script src="assets/vendor/flatpickr/js/flatpickr.min.js"></script>
+<script src="assets/vendor/choices/js/choices.min.js"></script>
+ 
+<!-- ThemeFunctions -->
+<script src="assets/js/functions.js"></script>
+
+</body>
+</html>

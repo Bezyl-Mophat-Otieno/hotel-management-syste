@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Doc - Booking Theme</title>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/prism.css">
+
+</head>
+
+<body>
+
+<!-- Header START -->
+<header class="navbar-light header-sticky">
+	<!-- Nav START -->
+	<nav class="navbar navbar-expand-xl z-index-9 navbar-divider">
+		<div class="container">
+			<!-- Logo START -->
+			<a class="navbar-brand" href="#">
+				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+			</a>
+			<!-- Logo END -->
+
+			<!-- Responsive navbar toggler -->
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="bi bi-search fs-4"> </i>
+			</button>
+
+			<!-- Responsive navbar toggler -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2" aria-controls="navbarCollapse2" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-animation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+
+			<!-- Main navbar START -->
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<!-- Nav Search START -->
+				<div class="col-xxl-6">
+					<div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+						<div class="nav-item w-100">
+							<form class="rounded position-relative">
+								<input class="form-control pe-5 bg-secondary bg-opacity-10" type="search" placeholder="Search" aria-label="Search">
+								<button class="btn btn-link bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6 text-primary"></i></button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- Nav Search END -->
+			</div>
+			<!-- Main navbar END -->
+
+			<!-- Profile and notification START -->
+			<ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
+
+				<!-- Notification dropdown START -->
+				<li class="nav-item ms-0 ms-md-3 dropdown">
+					<!-- Notification button -->
+					<a class="nav-notification btn btn-light p-0 mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<i class="bi bi-bell fa-fw"></i>
+					</a>
+					<!-- Notification dote -->
+					<span class="notif-badge animation-blink"></span>
+
+					<!-- Notification dropdown menu START -->
+					<div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg">
+						<div class="card bg-transparent">
+							<!-- Card header -->
+							<div class="card-header bg-transparent d-flex justify-content-between align-items-center border-bottom">
+								<h6 class="m-0">Notifications <span class="badge bg-danger bg-opacity-10 text-danger ms-2">4 new</span></h6>
+								<a class="small" href="#">Clear all</a>
+							</div>
+
+							<!-- Card body START -->
+							<div class="card-body p-0">
+								<ul class="list-group list-group-flush list-unstyled p-2">
+									<!-- Notification item -->
+									<li>
+										<a href="#" class="list-group-item list-group-item-action rounded notif-unread border-0 mb-1 p-3">
+											<h6 class="mb-2">New! Booking flights from New York ✈️</h6>
+											<p class="mb-0 small">Find the flexible ticket on flights around the world. Start searching today</p>
+											<span>Wednesday</span>
+										</a>
+									</li>
+									<!-- Notification item -->
+									<li>
+										<a href="#" class="list-group-item list-group-item-action rounded border-0 mb-1 p-3">
+											<h6 class="mb-2">Sunshine saving are here 🌞 save 30% or more on a stay</h6>
+											<span>15 Nov 2022</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- Card body END -->
+
+							<!-- Card footer -->
+							<div class="card-footer bg-transparent text-center border-top">
+								<a href="#" class="btn btn-sm btn-link mb-0 p-0">See all incoming activity</a>
+							</div>
+						</div>
+					</div>
+					<!-- Notification dropdown menu END -->
+				</li>
+				<!-- Notification dropdown END -->
+
+				<!-- Profile dropdown START -->
+				<li class="nav-item ms-3 dropdown">
+					<!-- Avatar -->
+					<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+						<img class="avatar-img rounded-2" src="assets/images/avatar/01.jpg" alt="avatar">
+					</a>
+
+					<!-- Profile dropdown START -->
+					<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
+						<!-- Profile info -->
+						<li class="px-3 mb-3">
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar me-3">
+									<img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar">
+								</div>
+								<div>
+									<a class="h6 mt-2 mt-sm-0" href="#">Lori Ferguson</a>
+									<p class="small m-0">example@gmail.com</p>
+								</div>
+							</div>
+						</li>
+
+						<!-- Links -->
+						<li> <hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
+						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+						<li> <hr class="dropdown-divider"></li>
+
+						<!-- Dark mode options START -->
+						<li>
+							<div class="nav-pills-primary-soft theme-icon-active d-flex justify-content-between align-items-center p-2 pb-0">
+								<span>Mode:</span>
+								<button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0" data-bs-theme-value="light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Light">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+										<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+										<use href="#"></use>
+									</svg>
+								</button>
+								<button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0" data-bs-theme-value="dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Dark">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+										<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+										<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+										<use href="#"></use>
+									</svg>
+								</button>
+								<button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0 active" data-bs-theme-value="auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Auto">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
+										<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+										<use href="#"></use>
+									</svg>
+								</button>
+							</div>
+						</li> 
+						<!-- Dark mode options END-->
+					</ul>
+					<!-- Profile dropdown END -->
+				</li>
+				<!-- Profile dropdown END -->
+			</ul>
+			<!-- Profile and notification END -->
+		</div>
+	</nav>
+	<!-- Nav END -->
+
+	<!--Main menu link START -->
+	<nav class="navbar navbar-expand-xl navbar-divider">
+		<div class="container px-0">
+			<!-- Main navbar START -->
+			<div class="navbar-collapse w-100 collapse" id="navbarCollapse2">
+				<!-- Nav Main menu START -->
+				<ul class="navbar-nav nav-active-line navbar-nav-scroll mx-auto">
+
+					<!-- Nav item -->
+					<li class="nav-item"> <a class="nav-link active" href="#">Hotels</a>	</li>
+
+					<!-- Nav item -->
+					<li class="nav-item"> <a class="nav-link" href="#">Flights</a> </li>
+
+					<!-- Nav item -->
+					<li class="nav-item"> <a class="nav-link" href="#">Holiday homes</a> </li>
+
+					<!-- Nav item -->
+					<li class="nav-item"> <a class="nav-link" href="#">Cab Hire</a> </li>
+
+					<!-- Nav item Listing -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="listingMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listings</a>
+						<ul class="dropdown-menu" aria-labelledby="listingMenu">
+							<!-- Dropdown submenu -->
+							<li> <a class="dropdown-item" href="#">Menu Item</a></li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">submenu Items</a>
+								<ul class="dropdown-menu" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="#">Submenu item 1</a></li>
+									<li> <a class="dropdown-item" href="#">Submenu item 2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- Nav item Pages -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+						<ul class="dropdown-menu" aria-labelledby="pageMenu">
+							<!-- Dropdown submenu -->
+							<li> <a class="dropdown-item" href="#">Menu Item 1</a></li>
+							<li> <a class="dropdown-item" href="#">Menu Item 2</a></li>
+						</ul>
+					</li>
+
+					<!-- Nav item Components -->
+					<li class="nav-item"> <a class="nav-link" href="#">Components</a>	</li>
+
+					<!-- Nav item link-->
+					<li class="nav-item "> <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a> </li>
+				</ul>
+			</div>
+			<!-- Main navbar END -->
+		</div>
+	</nav>
+	<!--Main menu link END -->
+</header>
+<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Main Banner START -->
+<section>
+	<!-- Content START -->
+	<div class="container">
+		<div class="row">
+			<div class="bg-light p-5 text-center">
+				<h1 class="mb-0 h2">Header Style 6</h1>
+			</div>
+		</div>
+	</div>
+	<!-- Content END -->
+</section>
+<!-- =======================
+Main Banner END -->
+
+<!-- =======================
+Code START -->
+<section>
+	<div class="container">
+		<div class="col-md-10 mx-auto">
+			<!-- Card START -->
+			<div class="card shadow p-0">
+				<!-- Card header -->
+				<div class="card-header border-bottom">
+					<h4 class="card-title mb-0">HTML</h4>
+				</div>
+				<!-- Card body START -->
+				<div class="card-body p-3 py-0">
+				<!-- Html tab -->
+				<div class="position-relative">
+					<pre id="copy-2" class="my-3 h-400px language-markup"><code class="language-markup" data-lang="html">&lt;!-- Header START --&gt;
+&lt;header class="navbar-light header-sticky"&gt;
+	&lt;!-- Nav START --&gt;
+	&lt;nav class="navbar navbar-expand-xl z-index-9 navbar-divider"&gt;
+		&lt;div class="container"&gt;
+			&lt;!-- Logo START --&gt;
+			&lt;a class="navbar-brand" href="#"&gt;
+				&lt;img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo"&gt;
+				&lt;img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo"&gt;
+			&lt;/a&gt;
+			&lt;!-- Logo END --&gt;
+
+			&lt;!-- Responsive navbar toggler --&gt;
+			&lt;button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"&gt;
+				&lt;i class="bi bi-search fs-4"&gt; &lt;/i&gt;
+			&lt;/button&gt;
+
+			&lt;!-- Responsive navbar toggler --&gt;
+			&lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2" aria-controls="navbarCollapse2" aria-expanded="false" aria-label="Toggle navigation"&gt;
+				&lt;span class="navbar-toggler-animation"&gt;
+					&lt;span&gt;&lt;/span&gt;
+					&lt;span&gt;&lt;/span&gt;
+					&lt;span&gt;&lt;/span&gt;
+				&lt;/span&gt;
+			&lt;/button&gt;
+
+			&lt;!-- Main navbar START --&gt;
+			&lt;div class="navbar-collapse collapse" id="navbarCollapse"&gt;
+				&lt;!-- Nav Search START --&gt;
+				&lt;div class="col-xxl-6"&gt;
+					&lt;div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center"&gt;
+						&lt;div class="nav-item w-100"&gt;
+							&lt;form class="rounded position-relative"&gt;
+								&lt;input class="form-control pe-5 bg-secondary bg-opacity-10" type="search" placeholder="Search" aria-label="Search"&gt;
+								&lt;button class="btn btn-link bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"&gt;&lt;i class="fas fa-search fs-6 text-primary"&gt;&lt;/i&gt;&lt;/button&gt;
+							&lt;/form&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;!-- Nav Search END --&gt;
+			&lt;/div&gt;
+			&lt;!-- Main navbar END --&gt;
+
+			&lt;!-- Profile and notification START --&gt;
+			&lt;ul class="nav flex-row align-items-center list-unstyled ms-xl-auto"&gt;
+
+				&lt;!-- Notification dropdown START --&gt;
+				&lt;li class="nav-item ms-0 ms-md-3 dropdown"&gt;
+					&lt;!-- Notification button --&gt;
+					&lt;a class="nav-notification btn btn-light p-0 mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"&gt;
+						&lt;i class="bi bi-bell fa-fw"&gt;&lt;/i&gt;
+					&lt;/a&gt;
+					&lt;!-- Notification dote --&gt;
+					&lt;span class="notif-badge animation-blink"&gt;&lt;/span&gt;
+
+					&lt;!-- Notification dropdown menu START --&gt;
+					&lt;div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg"&gt;
+						&lt;div class="card bg-transparent"&gt;
+							&lt;!-- Card header --&gt;
+							&lt;div class="card-header bg-transparent d-flex justify-content-between align-items-center border-bottom"&gt;
+								&lt;h6 class="m-0"&gt;Notifications &lt;span class="badge bg-danger bg-opacity-10 text-danger ms-2"&gt;4 new&lt;/span&gt;&lt;/h6&gt;
+								&lt;a class="small" href="#"&gt;Clear all&lt;/a&gt;
+							&lt;/div&gt;
+
+							&lt;!-- Card body START --&gt;
+							&lt;div class="card-body p-0"&gt;
+								&lt;ul class="list-group list-group-flush list-unstyled p-2"&gt;
+									&lt;!-- Notification item --&gt;
+									&lt;li&gt;
+										&lt;a href="#" class="list-group-item list-group-item-action rounded notif-unread border-0 mb-1 p-3"&gt;
+											&lt;h6 class="mb-2"&gt;New! Booking flights from New York ✈️&lt;/h6&gt;
+											&lt;p class="mb-0 small"&gt;Find the flexible ticket on flights around the world. Start searching today&lt;/p&gt;
+											&lt;span&gt;Wednesday&lt;/span&gt;
+										&lt;/a&gt;
+									&lt;/li&gt;
+									&lt;!-- Notification item --&gt;
+									&lt;li&gt;
+										&lt;a href="#" class="list-group-item list-group-item-action rounded border-0 mb-1 p-3"&gt;
+											&lt;h6 class="mb-2"&gt;Sunshine saving are here 🌞 save 30% or more on a stay&lt;/h6&gt;
+											&lt;span&gt;15 Nov 2022&lt;/span&gt;
+										&lt;/a&gt;
+									&lt;/li&gt;
+								&lt;/ul&gt;
+							&lt;/div&gt;
+							&lt;!-- Card body END --&gt;
+
+							&lt;!-- Card footer --&gt;
+							&lt;div class="card-footer bg-transparent text-center border-top"&gt;
+								&lt;a href="#" class="btn btn-sm btn-link mb-0 p-0"&gt;See all incoming activity&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- Notification dropdown menu END --&gt;
+				&lt;/li&gt;
+				&lt;!-- Notification dropdown END --&gt;
+
+				&lt;!-- Profile dropdown START --&gt;
+				&lt;li class="nav-item ms-3 dropdown"&gt;
+					&lt;!-- Avatar --&gt;
+					&lt;a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+						&lt;img class="avatar-img rounded-2" src="assets/images/avatar/01.jpg" alt="avatar"&gt;
+					&lt;/a&gt;
+
+					&lt;!-- Profile dropdown START --&gt;
+					&lt;ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown"&gt;
+						&lt;!-- Profile info --&gt;
+						&lt;li class="px-3 mb-3"&gt;
+							&lt;div class="d-flex align-items-center"&gt;
+								&lt;!-- Avatar --&gt;
+								&lt;div class="avatar me-3"&gt;
+									&lt;img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar"&gt;
+								&lt;/div&gt;
+								&lt;div&gt;
+									&lt;a class="h6 mt-2 mt-sm-0" href="#"&gt;Lori Ferguson&lt;/a&gt;
+									&lt;p class="small m-0"&gt;example@gmail.com&lt;/p&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/li&gt;
+
+						&lt;!-- Links --&gt;
+						&lt;li&gt; &lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;&lt;i class="bi bi-bookmark-check fa-fw me-2"&gt;&lt;/i&gt;My Bookings&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;&lt;i class="bi bi-heart fa-fw me-2"&gt;&lt;/i&gt;My Wishlist&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;&lt;i class="bi bi-gear fa-fw me-2"&gt;&lt;/i&gt;Settings&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;&lt;i class="bi bi-info-circle fa-fw me-2"&gt;&lt;/i&gt;Help Center&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a class="dropdown-item bg-danger-soft-hover" href="#"&gt;&lt;i class="bi bi-power fa-fw me-2"&gt;&lt;/i&gt;Sign Out&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt; &lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+
+						&lt;!-- Dark mode options START --&gt;
+						&lt;li&gt;
+							&lt;div class="nav-pills-primary-soft theme-icon-active d-flex justify-content-between align-items-center p-2 pb-0"&gt;
+								&lt;span&gt;Mode:&lt;/span&gt;
+								&lt;button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0" data-bs-theme-value="light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Light"&gt;
+									&lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16"&gt;
+										&lt;path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/&gt;
+										&lt;use href="#"&gt;&lt;/use&gt;
+									&lt;/svg&gt;
+								&lt;/button&gt;
+								&lt;button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0" data-bs-theme-value="dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Dark"&gt;
+									&lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16"&gt;
+										&lt;path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/&gt;
+										&lt;path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/&gt;
+										&lt;use href="#"&gt;&lt;/use&gt;
+									&lt;/svg&gt;
+								&lt;/button&gt;
+								&lt;button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0 active" data-bs-theme-value="auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Auto"&gt;
+									&lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16"&gt;
+										&lt;path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/&gt;
+										&lt;use href="#"&gt;&lt;/use&gt;
+									&lt;/svg&gt;
+								&lt;/button&gt;
+							&lt;/div&gt;
+						&lt;/li&gt; 
+						&lt;!-- Dark mode options END--&gt;
+					&lt;/ul&gt;
+					&lt;!-- Profile dropdown END --&gt;
+				&lt;/li&gt;
+				&lt;!-- Profile dropdown END --&gt;
+			&lt;/ul&gt;
+			&lt;!-- Profile and notification END --&gt;
+		&lt;/div&gt;
+	&lt;/nav&gt;
+	&lt;!-- Nav END --&gt;
+
+	&lt;!--Main menu link START --&gt;
+	&lt;nav class="navbar navbar-expand-xl navbar-divider"&gt;
+		&lt;div class="container px-0"&gt;
+			&lt;!-- Main navbar START --&gt;
+			&lt;div class="navbar-collapse w-100 collapse" id="navbarCollapse2"&gt;
+				&lt;!-- Nav Main menu START --&gt;
+				&lt;ul class="navbar-nav nav-active-line navbar-nav-scroll mx-auto"&gt;
+
+					&lt;!-- Nav item --&gt;
+					&lt;li class="nav-item"&gt; &lt;a class="nav-link active" href="#"&gt;Hotels&lt;/a&gt;	&lt;/li&gt;
+
+					&lt;!-- Nav item --&gt;
+					&lt;li class="nav-item"&gt; &lt;a class="nav-link" href="#"&gt;Flights&lt;/a&gt; &lt;/li&gt;
+
+					&lt;!-- Nav item --&gt;
+					&lt;li class="nav-item"&gt; &lt;a class="nav-link" href="#"&gt;Holiday homes&lt;/a&gt; &lt;/li&gt;
+
+					&lt;!-- Nav item --&gt;
+					&lt;li class="nav-item"&gt; &lt;a class="nav-link" href="#"&gt;Cab Hire&lt;/a&gt; &lt;/li&gt;
+
+					&lt;!-- Nav item Listing --&gt;
+					&lt;li class="nav-item dropdown"&gt;
+						&lt;a class="nav-link dropdown-toggle" href="#" id="listingMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Listings&lt;/a&gt;
+						&lt;ul class="dropdown-menu" aria-labelledby="listingMenu"&gt;
+							&lt;!-- Dropdown submenu --&gt;
+							&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Menu Item&lt;/a&gt;&lt;/li&gt;
+							&lt;li class="dropdown-submenu dropend"&gt;
+								&lt;a class="dropdown-item dropdown-toggle" href="#"&gt;submenu Items&lt;/a&gt;
+								&lt;ul class="dropdown-menu" data-bs-popper="none"&gt;
+									&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Submenu item 1&lt;/a&gt;&lt;/li&gt;
+									&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Submenu item 2&lt;/a&gt;&lt;/li&gt;
+								&lt;/ul&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/li&gt;
+
+					&lt;!-- Nav item Pages --&gt;
+					&lt;li class="nav-item dropdown"&gt;
+						&lt;a class="nav-link dropdown-toggle" href="#" id="pageMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Pages&lt;/a&gt;
+						&lt;ul class="dropdown-menu" aria-labelledby="pageMenu"&gt;
+							&lt;!-- Dropdown submenu --&gt;
+							&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+							&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/li&gt;
+
+					&lt;!-- Nav item Components --&gt;
+					&lt;li class="nav-item"&gt; &lt;a class="nav-link" href="docs/alerts.html"&gt;Components&lt;/a&gt;	&lt;/li&gt;
+
+					&lt;!-- Nav item link--&gt;
+					&lt;li class="nav-item "&gt; &lt;a class="nav-link" href="#"&gt;&lt;i class="fas fa-ellipsis-h"&gt;&lt;/i&gt;&lt;/a&gt; &lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;!-- Main navbar END --&gt;
+		&lt;/div&gt;
+	&lt;/nav&gt;
+	&lt;!--Main menu link END --&gt;
+&lt;/header&gt;
+&lt;!-- Header END --&gt;
+
+</code></pre>
+<button id="copy_id-2" data-clipboard-action="copy" data-clipboard-target="#copy-2" class="copy-link btn btn-primary btn-sm">Copy</button>
+					</div>
+					<!-- Card body END -->
+				</div>
+				<!-- Card END -->
+			</div>
+		</div>
+	</div>
+</section>
+<!-- =======================
+Code END -->
+
+</main>
+
+<!-- =======================
+JavaScripts -->
+
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/simple-scrollbar.min.js"></script>
+<script src="assets/js/prism.js"></script>
+<script src="assets/js/clipboard.min.js"></script>
+
+<!-- ThemeFunctions -->
+<script src="assets/js/functions.js"></script>
+
+</body>
+</html>

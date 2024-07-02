@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Doc - Booking Theme</title>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/css/flatpickr.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/prism.css">
+
+</head>
+
+<body>
+
+<!-- Header START -->
+<header class="navbar-light py-3">
+	<!-- Logo Nav START -->
+	<nav class="navbar navbar-expand-lg">
+		<div class="container d-block">
+			<div class="row align-items-center">
+				<div class="col-4">
+					<!-- Logo START -->
+					<a class="navbar-brand" href="index.html">
+						<img class="light-mode-item navbar-brand-item d-inline h-40px h-md-60px" src="assets/images/logo-hotel.svg" alt="logo">
+						<img class="dark-mode-item navbar-brand-item d-inline h-40px h-md-60px" src="assets/images/logo-hotel-light.svg" alt="logo">
+					</a>
+					<!-- Logo END -->
+				</div>
+
+				<div class="col-8">
+					<!-- Navbar top Right-->
+					<div class="align-items-center justify-content-end d-none d-lg-flex">
+						<ul class="nav border-bottom">
+							<li class="dropdown nav-item">
+								<a class="nav-link small pb-2" href="#" role="button" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-globe fa-fw me-2"></i>Language</a>
+								<ul class="dropdown-menu dropdown-animation dropdown-menu-end min-w-auto" aria-labelledby="languageDropdown">
+									<li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/uk.svg" alt="">English</a> </li>
+									<li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/sp.svg" alt="">Español</a> </li>
+									<li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/fr.svg" alt="">Français</a> </li>
+									<li> <a class="dropdown-item me-4" href="#"><img class="fa-fw me-2" src="assets/images/flags/gr.svg" alt="">Deutsch</a> </li>
+								</ul>
+							</li>
+							<li class="nav-item"> <a href="account-bookings.html" class="nav-link small pb-2"><i class="bi bi-briefcase me-2"></i>My Trip</a> </li>
+							<li class="nav-item"> <a href="help-center.html" class="nav-link small pb-2"><i class="bi bi-info-circle me-2"></i>Help</a> </li>
+							<li class="nav-item"> <a href="sign-in.html" class="nav-link small pb-2"><i class="far fa-user me-2"></i>Sign In or Login</a> </li>
+							<!-- Dark mode option START -->
+							<li class="nav-item dropdown">
+								<button class="btn btn-link text-warning lh-3 p-0 mb-0" id="bd-theme"
+								type="button"
+								aria-expanded="false"
+								data-bs-toggle="dropdown"
+								data-bs-display="static">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-circle-half theme-icon-active fa-fw" viewBox="0 0 16 16">
+									<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+									<use href="#"></use>
+								</svg>
+								</button>
+			
+								<ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme">
+									<li class="mb-1">
+										<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+											<svg width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
+												<path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+												<use href="#"></use>
+											</svg>Light
+										</button>
+									</li>
+									<li class="mb-1">
+										<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
+												<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+												<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+												<use href="#"></use>
+											</svg>Dark
+										</button>
+									</li>
+									<li>
+										<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch me-1" viewBox="0 0 16 16">
+												<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+												<use href="#"></use>
+											</svg>Auto
+										</button>
+									</li>
+								</ul>
+							</li>
+							<!-- Dark mode option END -->
+						</ul>
+					</div>	
+
+					<div class="d-sm-flex align-items-center justify-content-end">
+						<!-- Main navbar START -->
+						<div class="navbar-collapse collapse" id="navbarCollapse">
+							<ul class="navbar-nav navbar-nav-scroll ms-auto">
+								<!-- Nav item Find hotel -->
+								<li class="nav-item dropdown dropdown-fullwidth">
+									<a class="nav-link dropdown-toggle" href="#" id="hotelMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Find a hotel</a>
+									<div class="dropdown-menu" aria-labelledby="hotelMenu">
+										<div class="container">
+											<div class="row g-4 justify-content-between p-lg-3">
+												<!-- Destination -->
+												<div class="col-lg-5">
+													<h6 class="mb-3"><i class="bi bi-pin-map-fill text-primary me-2"></i>Destination</h6>
+													<hr class="my-2">
+													<div class="row">
+														<div class="col-lg-6">
+															<ul class="list-unstyled">
+																<li> <a class="dropdown-item" href="#">New York</a> </li>
+																<li> <a class="dropdown-item" href="#">California</a> </li>
+																<li> <a class="dropdown-item" href="#">New Jersey</a> </li>
+																<li> <a class="dropdown-item" href="#">Canada</a> </li>
+																<li> <a class="dropdown-item" href="#">Las vegas</a> </li>
+															</ul>
+														</div>
+	
+														<div class="col-lg-6">
+															<ul class="list-unstyled">
+																<li> <a class="dropdown-item" href="#">London</a> </li>
+																<li> <a class="dropdown-item" href="#">Singapore</a> </li>
+																<li> <a class="dropdown-item" href="#">Malaysia</a> </li>
+																<li> <a class="dropdown-item" href="#">manhattan</a> </li>
+															</ul>
+														</div>
+													</div>
+												</div>
+	
+												<!-- Hotel type -->
+												<div class="col-lg-3">
+													<h6 class="mb-3"><i class="bi bi-list-ul text-primary me-2"></i>Hotel type</h6>
+													<hr class="my-2">
+													<ul class="list-unstyled">
+														<li> <a class="dropdown-item" href="#">All</a> </li>
+														<li> <a class="dropdown-item" href="#">Hotels</a> </li>
+														<li> <a class="dropdown-item" href="#">Villas</a> </li>
+														<li> <a class="dropdown-item" href="#">Palace</a> </li>
+														<li> <a class="dropdown-item" href="#">Resorts</a> </li>
+														<li> <a class="dropdown-item" href="#">Restaurants</a> </li>
+													</ul>
+												</div>
+	
+												<!-- Category -->
+												<div class="col-lg-3">
+													<h6 class="mb-3"><i class="bi bi-grid-3x3-gap text-primary me-2"></i>Category</h6>
+													<hr class="my-2">
+													<ul class="list-unstyled">
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-umbrella-beach fa-fw me-2"></i>Beach</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-city fa-fw me-2"></i>City</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-spa fa-fw me-2"></i>Spa</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-mountain-sun fa-fw me-2"></i>Wildlife</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-golf-ball-tee fa-fw me-2"></i>Golf</a> </li>
+														<li> <a class="dropdown-item" href="#"><i class="fa-solid fa-gopuram fa-fw me-2"></i>Heritage</a> </li>
+													</ul>
+												</div>
+	
+												<!-- Action box -->
+												<div class="col-12">
+													<div class="card overflow-hidden" style="background-image:url(assets/images/bg/05.jpg); background-position: center left; background-size: cover;">
+														<div class="bg-overlay bg-dark opacity-5"></div>
+														<div class="card-body d-lg-flex justify-content-between align-items-center position-relative z-index-9">
+															<!-- Meta -->
+															<div class="mb-3 mb-lg-0">
+																<h5 class="text-white">Enjoy Great Times with us</h5>
+																<ul class="list-inline">
+																	<li class="list-inline-item text-white me-2"> <i class="bi bi-patch-check-fill me-1"></i>Get 1000 bonus points on every stay</li>
+																	<li class="list-inline-item text-white me-2"> <i class="bi bi-patch-check-fill me-1"></i>Earn through Dec 15</li>
+																	<li class="list-inline-item text-white"> <i class="bi bi-patch-check-fill me-1"></i>Redeem for free night and more</li>
+																</ul>
+															</div>
+															<!-- Button -->
+															<a href="#" class="btn btn-white mb-0">Register Now</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+	
+								<!-- Nav item Facilities -->
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hotel Facilities</a>
+									<ul class="dropdown-menu" aria-labelledby="pagesFacilities">
+	
+										<li> <a class="dropdown-item" href="#">Banquet</a></li>
+										<li> <a class="dropdown-item" href="#">Conference and meeting</a></li>
+										<li> <a class="dropdown-item" href="#">Fitness room</a></li>
+										<li> <a class="dropdown-item" href="#">Health club</a></li>
+										<li> <a class="dropdown-item" href="#">Sauna and steam bath</a></li>
+										<li> <a class="dropdown-item" href="#">Luggage storage</a></li>
+										<li> <a class="dropdown-item" href="#">Summer terrace</a></li>
+										<li> <a class="dropdown-item" href="#">Non-smoking rooms</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- Main navbar END -->
+
+						<!-- Toggler button and stay button -->
+						<div class="d-flex align-items-center justify-content-end">
+							<!-- Responsive navbar toggler -->
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-animation">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+								<span class="d-none d-sm-inline-block small">Menu</span>
+							</button>
+		
+							<!-- Booking form dropdown START -->
+							<div class="nav-item dropdown form-control-bg-light">
+								<!-- Stay button -->
+								<a class="btn btn-sm btn-primary mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+									Book a stay <i class="fa-solid fa-angle-down"></i>
+								</a>
+
+								<!-- Form START -->
+								<div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 mt-2">
+									<!-- Card START -->
+									<div class="card">
+										<!-- Card header -->
+										<div class="card-header border-bottom">
+											<h6 class="mb-0">Search your Destination</h6>
+										</div>
+
+										<!-- Card body -->
+										<div class="card-body">
+											<div class="row g-3">
+												<!-- Pickup -->
+												<div class="col-12">
+													<label class="form-label mb-0">Hotel or Destination</label>
+													<select class="form-select js-choice" data-search-enabled="true" aria-label=".form-select-sm">
+														<option value="">Select location</option>
+														<option>San Jacinto, USA</option>
+														<option>North Dakota, Canada</option>
+														<option>West Virginia, Paris</option>
+													</select>
+												</div>
+					
+												<!-- Date -->
+												<div class="col-md-6">
+													<label class="form-label mb-0">Check in</label>
+													<input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date">
+												</div>
+												
+												<!-- Date -->
+												<div class="col-md-6">
+													<label class="form-label mb-0">Check out</label>
+													<input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date">
+												</div>
+					
+												<!-- Occupant -->
+												<div class="col-12">
+													<!-- Dropdown input -->
+													<label class="form-label mb-0">Guests & rooms</label>
+													<div class="dropdown guest-selector me-2">
+														<input type="text" class="form-guest-selector form-control selection-result" value="2 Guests 1 Room" data-bs-auto-close="outside" data-bs-toggle="dropdown">
+													
+														<!-- dropdown items -->
+														<ul class="dropdown-menu guest-selector-dropdown">
+															<!-- Adult -->
+															<li class="d-flex justify-content-between">
+																<div>
+																	<h6 class="mb-0">Adults</h6>
+																	<small>Ages 13 or above</small>
+																</div>
+					
+																<div class="hstack gap-1 align-items-center">
+																	<button type="button" class="btn btn-link adult-remove p-0 mb-0"><i class="bi bi-dash-circle fs-5 fa-fw"></i></button>
+																	<h6 class="guest-selector-count mb-0 adults">2</h6>
+																	<button type="button" class="btn btn-link adult-add p-0 mb-0"><i class="bi bi-plus-circle fs-5 fa-fw"></i></button>
+																</div>
+															</li>
+					
+															<!-- Divider -->
+															<li class="dropdown-divider"></li>
+					
+															<!-- Child -->
+															<li class="d-flex justify-content-between">
+																<div>
+																	<h6 class="mb-0">Child</h6>
+																	<small>Ages 13 below</small>
+																</div>
+					
+																<div class="hstack gap-1 align-items-center">
+																	<button type="button" class="btn btn-link child-remove p-0 mb-0" ><i class="bi bi-dash-circle fs-5 fa-fw"></i></button>
+																	<h6 class="guest-selector-count mb-0 child">0</h6>
+																	<button type="button" class="btn btn-link child-add p-0 mb-0" ><i class="bi bi-plus-circle fs-5 fa-fw"></i></button>
+																</div>
+															</li>
+					
+															<!-- Divider -->
+															<li class="dropdown-divider"></li>
+					
+															<!-- Rooms -->
+															<li class="d-flex justify-content-between">
+																<div>
+																	<h6 class="mb-0">Rooms</h6>
+																	<small>Max room 8</small>
+																</div>
+					
+																<div class="hstack gap-1 align-items-center">
+																	<button type="button" class="btn btn-link room-remove p-0 mb-0" ><i class="bi bi-dash-circle fs-5 fa-fw"></i></button>
+																	<h6 class="guest-selector-count mb-0 rooms">1</h6>
+																	<button type="button" class="btn btn-link room-add p-0 mb-0" ><i class="bi bi-plus-circle fs-5 fa-fw"></i></button>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+					
+												<!-- Buttons -->
+												<div class="col-12 text-center">
+													<a href="#" class="text-primary-hover text-decoration-underline">Have a promo code?</a>
+													<button class="btn btn-primary-soft w-100 mt-3 mb-0">Check Availability</button>
+												</div>
+					
+											</div>	
+										</div>
+									</div>
+									<!-- Card END -->
+								</div>
+								<!-- Form END -->
+							</div>
+							<!-- Booking form dropdown END -->
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- Logo Nav END -->
+</header>
+<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Main Banner START -->
+<section>
+	<!-- Content START -->
+	<div class="container">
+		<div class="row">
+			<div class="bg-light p-5 text-center">
+				<h1 class="mb-0 h2">Header Style 7</h1>
+			</div>
+		</div>
+	</div>
+	<!-- Content END -->
+</section>
+<!-- =======================
+Main Banner END -->
+
+<!-- =======================
+Code START -->
+<section>
+	<div class="container">
+		<div class="col-md-10 mx-auto">
+			<!-- Card START -->
+			<div class="card shadow p-0">
+				<!-- Card header -->
+				<div class="card-header border-bottom">
+					<h4 class="card-title mb-0">HTML</h4>
+				</div>
+				<!-- Card body START -->
+				<div class="card-body p-3 py-0">
+				<!-- Html tab -->
+				<div class="position-relative">
+					<pre id="copy-2" class="my-3 h-400px language-markup"><code class="language-markup" data-lang="html">&lt;!-- Header START --&gt;
+&lt;header class="navbar-light py-3"&gt;
+	&lt;!-- Logo Nav START --&gt;
+	&lt;nav class="navbar navbar-expand-lg"&gt;
+		&lt;div class="container d-block"&gt;
+			&lt;div class="row align-items-center"&gt;
+				&lt;div class="col-4"&gt;
+					&lt;!-- Logo START --&gt;
+					&lt;a class="navbar-brand" href="index.html"&gt;
+						&lt;img class="light-mode-item navbar-brand-item d-inline h-40px h-md-60px" src="assets/images/logo-hotel.svg" alt="logo"&gt;
+						&lt;img class="dark-mode-item navbar-brand-item d-inline h-40px h-md-60px" src="assets/images/logo-hotel-light.svg" alt="logo"&gt;
+					&lt;/a&gt;
+					&lt;!-- Logo END --&gt;
+				&lt;/div&gt;
+
+				&lt;div class="col-8"&gt;
+					&lt;!-- Navbar top Right--&gt;
+					&lt;div class="align-items-center justify-content-end d-none d-lg-flex"&gt;
+						&lt;ul class="nav border-bottom"&gt;
+							&lt;li class="dropdown nav-item"&gt;
+								&lt;a class="nav-link small pb-2" href="#" role="button" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;&lt;i class="bi bi-globe fa-fw me-2"&gt;&lt;/i&gt;Language&lt;/a&gt;
+								&lt;ul class="dropdown-menu dropdown-animation dropdown-menu-end min-w-auto" aria-labelledby="languageDropdown"&gt;
+									&lt;li&gt; &lt;a class="dropdown-item me-4" href="#"&gt;&lt;img class="fa-fw me-2" src="assets/images/flags/uk.svg" alt=""&gt;English&lt;/a&gt; &lt;/li&gt;
+									&lt;li&gt; &lt;a class="dropdown-item me-4" href="#"&gt;&lt;img class="fa-fw me-2" src="assets/images/flags/sp.svg" alt=""&gt;Español&lt;/a&gt; &lt;/li&gt;
+									&lt;li&gt; &lt;a class="dropdown-item me-4" href="#"&gt;&lt;img class="fa-fw me-2" src="assets/images/flags/fr.svg" alt=""&gt;Français&lt;/a&gt; &lt;/li&gt;
+									&lt;li&gt; &lt;a class="dropdown-item me-4" href="#"&gt;&lt;img class="fa-fw me-2" src="assets/images/flags/gr.svg" alt=""&gt;Deutsch&lt;/a&gt; &lt;/li&gt;
+								&lt;/ul&gt;
+							&lt;/li&gt;
+							&lt;li class="nav-item"&gt; &lt;a href="account-bookings.html" class="nav-link small pb-2"&gt;&lt;i class="bi bi-briefcase me-2"&gt;&lt;/i&gt;My Trip&lt;/a&gt; &lt;/li&gt;
+							&lt;li class="nav-item"&gt; &lt;a href="help-center.html" class="nav-link small pb-2"&gt;&lt;i class="bi bi-info-circle me-2"&gt;&lt;/i&gt;Help&lt;/a&gt; &lt;/li&gt;
+							&lt;li class="nav-item"&gt; &lt;a href="sign-in.html" class="nav-link small pb-2"&gt;&lt;i class="far fa-user me-2"&gt;&lt;/i&gt;Sign In or Login&lt;/a&gt; &lt;/li&gt;
+							&lt;!-- Dark mode option START --&gt;
+							&lt;li class="nav-item dropdown"&gt;
+								&lt;button class="btn btn-link text-warning lh-3 p-0 mb-0" id="bd-theme"
+								type="button"
+								aria-expanded="false"
+								data-bs-toggle="dropdown"
+								data-bs-display="static"&gt;
+								&lt;svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-circle-half theme-icon-active fa-fw" viewBox="0 0 16 16"&gt;
+									&lt;path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/&gt;
+									&lt;use href="#"&gt;&lt;/use&gt;
+								&lt;/svg&gt;
+								&lt;/button&gt;
+			
+								&lt;ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme"&gt;
+									&lt;li class="mb-1"&gt;
+										&lt;button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"&gt;
+											&lt;svg width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16"&gt;
+												&lt;path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/&gt;
+												&lt;use href="#"&gt;&lt;/use&gt;
+											&lt;/svg&gt;Light
+										&lt;/button&gt;
+									&lt;/li&gt;
+									&lt;li class="mb-1"&gt;
+										&lt;button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"&gt;
+											&lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill fa-fw mode-switch me-1" viewBox="0 0 16 16"&gt;
+												&lt;path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/&gt;
+												&lt;path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/&gt;
+												&lt;use href="#"&gt;&lt;/use&gt;
+											&lt;/svg&gt;Dark
+										&lt;/button&gt;
+									&lt;/li&gt;
+									&lt;li&gt;
+										&lt;button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"&gt;
+											&lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch me-1" viewBox="0 0 16 16"&gt;
+												&lt;path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/&gt;
+												&lt;use href="#"&gt;&lt;/use&gt;
+											&lt;/svg&gt;Auto
+										&lt;/button&gt;
+									&lt;/li&gt;
+								&lt;/ul&gt;
+							&lt;/li&gt;
+							&lt;!-- Dark mode option END --&gt;
+						&lt;/ul&gt;
+					&lt;/div&gt;	
+
+					&lt;div class="d-sm-flex align-items-center justify-content-end"&gt;
+						&lt;!-- Main navbar START --&gt;
+						&lt;div class="navbar-collapse collapse" id="navbarCollapse"&gt;
+							&lt;ul class="navbar-nav navbar-nav-scroll ms-auto"&gt;
+								&lt;!-- Nav item Find hotel --&gt;
+								&lt;li class="nav-item dropdown dropdown-fullwidth"&gt;
+									&lt;a class="nav-link dropdown-toggle" href="#" id="hotelMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Find a hotel&lt;/a&gt;
+									&lt;div class="dropdown-menu" aria-labelledby="hotelMenu"&gt;
+										&lt;div class="container"&gt;
+											&lt;div class="row g-4 justify-content-between p-lg-3"&gt;
+												&lt;!-- Destination --&gt;
+												&lt;div class="col-lg-5"&gt;
+													&lt;h6 class="mb-3"&gt;&lt;i class="bi bi-pin-map-fill text-primary me-2"&gt;&lt;/i&gt;Destination&lt;/h6&gt;
+													&lt;hr class="my-2"&gt;
+													&lt;div class="row"&gt;
+														&lt;div class="col-lg-6"&gt;
+															&lt;ul class="list-unstyled"&gt;
+																&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;New York&lt;/a&gt; &lt;/li&gt;
+																&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;California&lt;/a&gt; &lt;/li&gt;
+																&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;New Jersey&lt;/a&gt; &lt;/li&gt;
+																&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Canada&lt;/a&gt; &lt;/li&gt;
+																&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Las vegas&lt;/a&gt; &lt;/li&gt;
+															&lt;/ul&gt;
+														&lt;/div&gt;
+	
+														&lt;div class="col-lg-6"&gt;
+															&lt;ul class="list-unstyled"&gt;
+																&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;London&lt;/a&gt; &lt;/li&gt;
+																&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Singapore&lt;/a&gt; &lt;/li&gt;
+																&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Malaysia&lt;/a&gt; &lt;/li&gt;
+																&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;manhattan&lt;/a&gt; &lt;/li&gt;
+															&lt;/ul&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+	
+												&lt;!-- Hotel type --&gt;
+												&lt;div class="col-lg-3"&gt;
+													&lt;h6 class="mb-3"&gt;&lt;i class="bi bi-list-ul text-primary me-2"&gt;&lt;/i&gt;Hotel type&lt;/h6&gt;
+													&lt;hr class="my-2"&gt;
+													&lt;ul class="list-unstyled"&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;All&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Hotels&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Villas&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Palace&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Resorts&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Restaurants&lt;/a&gt; &lt;/li&gt;
+													&lt;/ul&gt;
+												&lt;/div&gt;
+	
+												&lt;!-- Category --&gt;
+												&lt;div class="col-lg-3"&gt;
+													&lt;h6 class="mb-3"&gt;&lt;i class="bi bi-grid-3x3-gap text-primary me-2"&gt;&lt;/i&gt;Category&lt;/h6&gt;
+													&lt;hr class="my-2"&gt;
+													&lt;ul class="list-unstyled"&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;&lt;i class="fa-solid fa-umbrella-beach fa-fw me-2"&gt;&lt;/i&gt;Beach&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;&lt;i class="fa-solid fa-city fa-fw me-2"&gt;&lt;/i&gt;City&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;&lt;i class="fa-solid fa-spa fa-fw me-2"&gt;&lt;/i&gt;Spa&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;&lt;i class="fa-solid fa-mountain-sun fa-fw me-2"&gt;&lt;/i&gt;Wildlife&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;&lt;i class="fa-solid fa-golf-ball-tee fa-fw me-2"&gt;&lt;/i&gt;Golf&lt;/a&gt; &lt;/li&gt;
+														&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;&lt;i class="fa-solid fa-gopuram fa-fw me-2"&gt;&lt;/i&gt;Heritage&lt;/a&gt; &lt;/li&gt;
+													&lt;/ul&gt;
+												&lt;/div&gt;
+	
+												&lt;!-- Action box --&gt;
+												&lt;div class="col-12"&gt;
+													&lt;div class="card overflow-hidden" style="background-image:url(assets/images/bg/05.jpg); background-position: center left; background-size: cover;"&gt;
+														&lt;div class="bg-overlay bg-dark opacity-5"&gt;&lt;/div&gt;
+														&lt;div class="card-body d-lg-flex justify-content-between align-items-center position-relative z-index-9"&gt;
+															&lt;!-- Meta --&gt;
+															&lt;div class="mb-3 mb-lg-0"&gt;
+																&lt;h5 class="text-white"&gt;Enjoy Great Times with us&lt;/h5&gt;
+																&lt;ul class="list-inline"&gt;
+																	&lt;li class="list-inline-item text-white me-2"&gt; &lt;i class="bi bi-patch-check-fill me-1"&gt;&lt;/i&gt;Get 1000 bonus points on every stay&lt;/li&gt;
+																	&lt;li class="list-inline-item text-white me-2"&gt; &lt;i class="bi bi-patch-check-fill me-1"&gt;&lt;/i&gt;Earn through Dec 15&lt;/li&gt;
+																	&lt;li class="list-inline-item text-white"&gt; &lt;i class="bi bi-patch-check-fill me-1"&gt;&lt;/i&gt;Redeem for free night and more&lt;/li&gt;
+																&lt;/ul&gt;
+															&lt;/div&gt;
+															&lt;!-- Button --&gt;
+															&lt;a href="#" class="btn btn-white mb-0"&gt;Register Now&lt;/a&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/li&gt;
+	
+								&lt;!-- Nav item Facilities --&gt;
+								&lt;li class="nav-item dropdown"&gt;
+									&lt;a class="nav-link dropdown-toggle" href="#" id="pagesFacilities" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Hotel Facilities&lt;/a&gt;
+									&lt;ul class="dropdown-menu" aria-labelledby="pagesFacilities"&gt;
+	
+										&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Banquet&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Conference and meeting&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Fitness room&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Health club&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Sauna and steam bath&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Luggage storage&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Summer terrace&lt;/a&gt;&lt;/li&gt;
+										&lt;li&gt; &lt;a class="dropdown-item" href="#"&gt;Non-smoking rooms&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/div&gt;
+						&lt;!-- Main navbar END --&gt;
+
+						&lt;!-- Toggler button and stay button --&gt;
+						&lt;div class="d-flex align-items-center justify-content-end"&gt;
+							&lt;!-- Responsive navbar toggler --&gt;
+							&lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"&gt;
+								&lt;span class="navbar-toggler-animation"&gt;
+									&lt;span&gt;&lt;/span&gt;
+									&lt;span&gt;&lt;/span&gt;
+									&lt;span&gt;&lt;/span&gt;
+								&lt;/span&gt;
+								&lt;span class="d-none d-sm-inline-block small"&gt;Menu&lt;/span&gt;
+							&lt;/button&gt;
+		
+							&lt;!-- Booking form dropdown START --&gt;
+							&lt;div class="nav-item dropdown form-control-bg-light"&gt;
+								&lt;!-- Stay button --&gt;
+								&lt;a class="btn btn-sm btn-primary mb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"&gt;
+									Book a stay &lt;i class="fa-solid fa-angle-down"&gt;&lt;/i&gt;
+								&lt;/a&gt;
+
+								&lt;!-- Form START --&gt;
+								&lt;div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 mt-2"&gt;
+									&lt;!-- Card START --&gt;
+									&lt;div class="card"&gt;
+										&lt;!-- Card header --&gt;
+										&lt;div class="card-header border-bottom"&gt;
+											&lt;h6 class="mb-0"&gt;Search your Destination&lt;/h6&gt;
+										&lt;/div&gt;
+
+										&lt;!-- Card body --&gt;
+										&lt;div class="card-body"&gt;
+											&lt;div class="row g-3"&gt;
+												&lt;!-- Pickup --&gt;
+												&lt;div class="col-12"&gt;
+													&lt;label class="form-label mb-0"&gt;Hotel or Destination&lt;/label&gt;
+													&lt;select class="form-select js-choice" data-search-enabled="true" aria-label=".form-select-sm"&gt;
+														&lt;option value=""&gt;Select location&lt;/option&gt;
+														&lt;option&gt;San Jacinto, USA&lt;/option&gt;
+														&lt;option&gt;North Dakota, Canada&lt;/option&gt;
+														&lt;option&gt;West Virginia, Paris&lt;/option&gt;
+													&lt;/select&gt;
+												&lt;/div&gt;
+					
+												&lt;!-- Date --&gt;
+												&lt;div class="col-md-6"&gt;
+													&lt;label class="form-label mb-0"&gt;Check in&lt;/label&gt;
+													&lt;input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date"&gt;
+												&lt;/div&gt;
+												
+												&lt;!-- Date --&gt;
+												&lt;div class="col-md-6"&gt;
+													&lt;label class="form-label mb-0"&gt;Check out&lt;/label&gt;
+													&lt;input type="text" class="form-control flatpickr" data-date-format="d M Y" placeholder="Select date"&gt;
+												&lt;/div&gt;
+					
+												&lt;!-- Occupant --&gt;
+												&lt;div class="col-12"&gt;
+													&lt;!-- Dropdown input --&gt;
+													&lt;label class="form-label mb-0"&gt;Guests &amp; rooms&lt;/label&gt;
+													&lt;div class="dropdown guest-selector me-2"&gt;
+														&lt;input type="text" class="form-guest-selector form-control selection-result" value="2 Guests 1 Room" data-bs-auto-close="outside" data-bs-toggle="dropdown"&gt;
+													
+														&lt;!-- dropdown items --&gt;
+														&lt;ul class="dropdown-menu guest-selector-dropdown"&gt;
+															&lt;!-- Adult --&gt;
+															&lt;li class="d-flex justify-content-between"&gt;
+																&lt;div&gt;
+																	&lt;h6 class="mb-0"&gt;Adults&lt;/h6&gt;
+																	&lt;small&gt;Ages 13 or above&lt;/small&gt;
+																&lt;/div&gt;
+					
+																&lt;div class="hstack gap-1 align-items-center"&gt;
+																	&lt;button type="button" class="btn btn-link adult-remove p-0 mb-0"&gt;&lt;i class="bi bi-dash-circle fs-5 fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;
+																	&lt;h6 class="guest-selector-count mb-0 adults"&gt;2&lt;/h6&gt;
+																	&lt;button type="button" class="btn btn-link adult-add p-0 mb-0"&gt;&lt;i class="bi bi-plus-circle fs-5 fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;
+																&lt;/div&gt;
+															&lt;/li&gt;
+					
+															&lt;!-- Divider --&gt;
+															&lt;li class="dropdown-divider"&gt;&lt;/li&gt;
+					
+															&lt;!-- Child --&gt;
+															&lt;li class="d-flex justify-content-between"&gt;
+																&lt;div&gt;
+																	&lt;h6 class="mb-0"&gt;Child&lt;/h6&gt;
+																	&lt;small&gt;Ages 13 below&lt;/small&gt;
+																&lt;/div&gt;
+					
+																&lt;div class="hstack gap-1 align-items-center"&gt;
+																	&lt;button type="button" class="btn btn-link child-remove p-0 mb-0" &gt;&lt;i class="bi bi-dash-circle fs-5 fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;
+																	&lt;h6 class="guest-selector-count mb-0 child"&gt;0&lt;/h6&gt;
+																	&lt;button type="button" class="btn btn-link child-add p-0 mb-0" &gt;&lt;i class="bi bi-plus-circle fs-5 fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;
+																&lt;/div&gt;
+															&lt;/li&gt;
+					
+															&lt;!-- Divider --&gt;
+															&lt;li class="dropdown-divider"&gt;&lt;/li&gt;
+					
+															&lt;!-- Rooms --&gt;
+															&lt;li class="d-flex justify-content-between"&gt;
+																&lt;div&gt;
+																	&lt;h6 class="mb-0"&gt;Rooms&lt;/h6&gt;
+																	&lt;small&gt;Max room 8&lt;/small&gt;
+																&lt;/div&gt;
+					
+																&lt;div class="hstack gap-1 align-items-center"&gt;
+																	&lt;button type="button" class="btn btn-link room-remove p-0 mb-0" &gt;&lt;i class="bi bi-dash-circle fs-5 fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;
+																	&lt;h6 class="guest-selector-count mb-0 rooms"&gt;1&lt;/h6&gt;
+																	&lt;button type="button" class="btn btn-link room-add p-0 mb-0" &gt;&lt;i class="bi bi-plus-circle fs-5 fa-fw"&gt;&lt;/i&gt;&lt;/button&gt;
+																&lt;/div&gt;
+															&lt;/li&gt;
+														&lt;/ul&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+					
+												&lt;!-- Buttons --&gt;
+												&lt;div class="col-12 text-center"&gt;
+													&lt;a href="#" class="text-primary-hover text-decoration-underline"&gt;Have a promo code?&lt;/a&gt;
+													&lt;button class="btn btn-primary-soft w-100 mt-3 mb-0"&gt;Check Availability&lt;/button&gt;
+												&lt;/div&gt;
+					
+											&lt;/div&gt;	
+										&lt;/div&gt;
+									&lt;/div&gt;
+									&lt;!-- Card END --&gt;
+								&lt;/div&gt;
+								&lt;!-- Form END --&gt;
+							&lt;/div&gt;
+							&lt;!-- Booking form dropdown END --&gt;
+						&lt;/div&gt;	
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/nav&gt;
+	&lt;!-- Logo Nav END --&gt;
+&lt;/header&gt;
+&lt;!-- Header END --&gt;
+
+</code></pre>
+<button id="copy_id-2" data-clipboard-action="copy" data-clipboard-target="#copy-2" class="copy-link btn btn-primary btn-sm">Copy</button>
+					</div>
+					<!-- Card body END -->
+				</div>
+				<!-- Card END -->
+			</div>
+		</div>
+	</div>
+</section>
+<!-- =======================
+Code END -->
+
+</main>
+
+<!-- =======================
+JavaScripts -->
+
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/vendor/flatpickr/js/flatpickr.min.js"></script>
+<script src="assets/vendor/choices/js/choices.min.js"></script>
+<script src="assets/js/simple-scrollbar.min.js"></script>
+<script src="assets/js/prism.js"></script>
+<script src="assets/js/clipboard.min.js"></script>
+
+<!-- ThemeFunctions -->
+<script src="assets/js/functions.js"></script>
+
+</body>
+</html>
